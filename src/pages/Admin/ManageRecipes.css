@@ -1,0 +1,12 @@
+ 
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.flex{
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,48 @@
+.card{
+    
+    width: 330px;
+    height: 300px;
+    background-color: white;
+    /* border-radius: 10px; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+     
+}
+
+.img{
+    height: 170px;
+    background-image: url('/public/tajine.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center ;
+}
+
+.title{
+    margin-left: 135px;
+    margin-top: 10px;
+    
+}
+
+.flex-btn{
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.edit-btn{
+    width: 100px;
+    margin-left: 40px ;
+    border: none;
+    border-radius: 5px;
+    background-color: aqua;
+     
+}
+
+.delete-btn{
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 128, 0);
+}
+
+ 

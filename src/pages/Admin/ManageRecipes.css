@@ -4,9 +4,105 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
+    margin-left: 220px;
 }
 
 .flex{
     display: flex;
     gap: 10px;
+}
+
+
+/* ===== Overlay Background ===== */
+.edit-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* ===== Popup Box ===== */
+.edit-popup-content {
+  background: #fff;
+  padding: 20px;
+  width: 380px;          /* compact width */
+  max-height: 80vh;      /* prevent overflow */
+  overflow-y: auto;      /* scroll inside */
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: popupIn 0.25s ease;
+}
+
+/* ===== Form Styling ===== */
+.edit-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* ===== Scrollbar Styling ===== */
+.edit-popup-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.edit-popup-content::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+  border-radius: 4px;
+}
+
+/* ===== Buttons Row ===== */
+.edit-popup-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===== Buttons ===== */
+.cancel-btn,
+.save-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Cancel */
+.cancel-btn {
+  background: #ccc;
+}
+
+/* Save */
+.save-btn {
+  background: #00a86b;
+  color: white;
+}
+
+/* ===== Popup Animation ===== */
+@keyframes popupIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

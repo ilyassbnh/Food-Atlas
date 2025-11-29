@@ -5,6 +5,7 @@
     background-color: white;
     /* border-radius: 10px; */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+   
      
 }
 
@@ -18,31 +19,127 @@
 }
 
 .title{
-    margin-left: 135px;
-    margin-top: 10px;
-    
+    /* margin-left: 135px;
+    margin-top: 10px; */
+    text-align: center;
 }
 
 .flex-btn{
     display: flex;
-    gap: 50px;
+    gap: 100px;
     margin-top: 40px;
 }
 
 .edit-btn{
-    width: 100px;
-    margin-left: 40px ;
+    
+    margin-left: 77px ;
     border: none;
     border-radius: 5px;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
      
 }
 
-.delete-btn{
-    width: 100px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(255, 128, 0);
+.edit-icon {
+  transition: transform 0.3s ease;
 }
 
+.edit-btn:hover .edit-icon {
+  transform: translateX(-5px);
+}
+
+.edit-text {
+  opacity: 0;
+  font-size: 14px;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+.edit-btn:hover .edit-text {
+  opacity: 1;
+}
+
+.delete-btn{
+    
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.delete-icon{
+    transition: transform 0.3s ease;
+}
+
+.delete-text{
+    opacity: 0;
+    font-size: 14px;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.delete-btn:hover .delete-icon{
+    transform: translateX(-5px);
+}
+
+.delete-btn:hover .delete-text{
+    opacity: 1;
+}
  
+
+
+
+.delete-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.delete-popup-content {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: popIn 0.2s ease-out;
+}
+
+.delete-popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cancel-btn,
+.confirm-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background: #ccc;
+}
+
+.confirm-btn {
+  background: #ff4444;
+  color: white;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

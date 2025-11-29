@@ -11,7 +11,7 @@ export default function ManageRecipes() {
               {food.recipes.map((index) => {
              return(
              
-                <Card/>
+                <Card title={index.title} category_id={index.category_id} country={index.country} description={index.description} prep_time={index.prep_time} cook_time={index.cook_time} servings={index.servings} difficulty={index.difficulty}   id={index.id}/>
               
                
           )

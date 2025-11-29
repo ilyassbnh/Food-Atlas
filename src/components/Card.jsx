@@ -1,189 +1,200 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import './Card.css'
-import food from '../data/app.json'
-import axios from 'axios'
-import { FiTrash } from "react-icons/fi";
-import { FiEdit } from "react-icons/fi";
+import axios from "axios"
+const Card = (props) => {
 
-
-export default function Card(props) {
-  const [deletePop,setDeletePop] = useState(false)
-  const [EditPop,setEditPop] = useState(false)
-
-  const [title,setTitle] = useState(props.title)
-  const [category_id,setCategory_id] = useState(props.category_id)
    
-  const [country,setContry] = useState(props.country)
-  const [description,setDescription] = useState(props.description)
-  const [prep_time,setPrep_time] = useState(props.prep_time)
-  const [cook_time,setCook_time] = useState(props.cook_time)
-  const [servings,setServings] = useState(props.servings)
-  const [difficulty,setDifficulty] = useState(props.difficulty)
 
-  const EditPopup = (id) => {
-    axios.patch(`http://localhost:3000/recipes/${id}`,{
+   const [EditPop,setEditPop] = useState(false)
+   const [DeletePop,setDeletePop] = useState(false)
+
+   const [title,setTitle] = useState(props.title)
+   const [category_id,setCategoryId] = useState(props.category_id)
+   const [country,setCountry] = useState(props.country)
+    const [description,setDescription] = useState(props.description)
+    const [prep_time,setPrepTime] = useState(props.prep_time)
+    const [cook_time,setCookTime] = useState(props.cook_time)
+    const [servings,setServings] = useState(props.servings)
+    const [difficulty,setDifficulty] = useState(props.difficulty)
+    const [image,setImage] = useState(props.image)
+    const [ingredients,setIngredients] = useState(props.ingredients)
+    const [instructions,setInstructions] = useState(props.instructions)
+
+   const Delete = (id) => {
+    axios.delete(`http://localhost:3000/recipes/${id}`)
+      .then((res) => {
+        console.log("deleted", res)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+      setDeletePop(false)
+   }
+
+   const Edit = (id) =>{
+    axios.put(`http://localhost:3000/recipes/${id}`,{
       title : title,
-      category_id : category_id,
-      country : country,
+     category_id : category_id,
+     country : country,
       description : description,
       prep_time : prep_time,
       cook_time : cook_time,
       servings : servings,
-      difficulty : difficulty
+      difficulty : difficulty,
+      image : image,
+      ingredients : ingredients,
+      instructions : instructions
     }
     ).then((res)=>{
       console.log(res)
-    }).catch((err) =>{
+    }).catch((err)=>{
       console.log(err)
     })
-    setEditPop(false)
-
-  }
-
-  const showDeletePop = () => {
-      setDeletePop(true)
-  }
-  const DeleteR = (id) => {
-  axios.delete(`http://localhost:3000/recipes/${id}`)
-    .then((res) => {
-      console.log("Deleted:", res.data);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-
-    setDeletePop(false)
-};
+     setEditPop(false)
+      
+   }
 
   return (
-    <div>
-      
-      
-           <div className='card' >
-          <div className='img'></div>
-          <h4 className='title'>{props.title}</h4>
-        <div className='flex-btn'>
-               <button  className='edit-btn' onClick={() =>setEditPop(true)}>
-                <FiEdit className='edit-icon' size={20} />
-                <span className="edit-text">Edit</span>
-               
-               </button> 
-               <button  className='delete-btn' onClick={() => showDeletePop()}>
-                
-                <FiTrash className='delete-icon' size={20} />
-                <span className='delete-text'>Delete</span>
-                </button>  
+    <>
+    
+   
+   <div style={{ animation: `fadeInUp 0.5s ease-out forwards`, ...props.style }} className='box flex flex-col w-64 h-[280px] bg-white p-2 text-center rounded-sm transform transition hover:scale-105 animate-fadeInUp'>
+   <div className='bg-[url(/public/tajine.jpg)] bg-no-repeat bg-cover w-[240px] h-[165px] rounded-sm'></div>
 
-        </div>
-        </div>
-
-       {deletePop && (
-  <div className="delete-popup">
-    <div className="delete-popup-content">
-      <h2>Are you sure you want to delete this item?</h2>
-
-      <div className="delete-popup-buttons">
-        <button className="cancel-btn" onClick={() => setDeletePop(false)} >Cancel</button>
-        <button className="confirm-btn"  onClick={() => DeleteR(props.id)} >Delete</button>
+   <div className='flex flex-col'>
+      <h6>{props.title}</h6>
+      <p className='text-sm'>{props.country}</p>
+      <div className='flex justify-center gap-[10px] mt-2'>
+         <button className='bg-[#eeeded] txt w-[100px]  rounded' onClick={() =>setEditPop(true)}>Edit</button>
+         <button className='bg-red-500 text-white txt w-[100px]  rounded' onClick={() =>setDeletePop(true)}>Delete</button>
       </div>
+   </div>
+</div>
+
+
+    {DeletePop && (
+      <>
+      <div className="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
+      <div className=' fixed top-[200px] left-[420px]    w-[350px] h-[250px] rounded-md box bg-white flex  flex-col text-start p-4 z-50 '>
+          <h3>Are you sure you want to delete</h3>
+          <h6 className='pt-[20px]'>{props.title} from {props.country}</h6>
+          <div className='flex justify-center gap-[100px] place-content-around place-content-between mt-[50px]'>
+            <button className='bg-[#eeeded] text-black w-[100px] rounded' onClick={() =>setDeletePop(false)} >Cancel</button>
+
+            <button className='bg-red-500 text-white w-[100px] rounded' onClick={() =>Delete(props.id)}>Delete</button>
+
+          </div>
+      </div>
+      </>
+    )}
+
+    {EditPop && (
+  <>
+    {/* Overlay */}
+    <div className="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
+
+    {/* Popup */}
+    <div className='fixed top-[100px] left-[50%] translate-x-[-50%] w-[500px] max-h-[80vh] overflow-y-auto rounded-md box bg-white flex flex-col p-6 z-50 shadow-lg'>
+    <div className='flex place-content-between '>
+      <h3 className="text-xl font-semibold mb-4 text-center ">Edit Recipe</h3>
+      <button className='bg-[#eeeded] text-black w-[100px] rounded h-[40px]' onClick={() => setEditPop(false)}>Cancel</button>
     </div>
-  </div>
+
+      {/* Recipe Form */}
+      <form className="flex flex-col gap-3">
+        {/* Title */}
+        <div>
+          <label className="text-sm font-medium">Title</label>
+          <input type="text" value={title} className="w-full p-2 border rounded" onChange={(e) => setTitle(e.target.value)  } />
+        </div>
+
+        {/* Category */}
+        <div>
+          <label className="text-sm font-medium">Category ID</label>
+          <input type="text" value={category_id} className="w-full p-2 border rounded" onChange={(e) => setCategoryId(e.target.value)} />
+        </div>
+
+        {/* Country */}
+        <div>
+          <label className="text-sm font-medium">Country</label>
+          <input type="text" value={country} className="w-full p-2 border rounded" onChange={(e) => setCountry(e.target.value)} />
+        </div>
+
+        {/* Description */}
+        <div>
+          <label className="text-sm font-medium">Description</label>
+          <textarea value={description} className="w-full p-2 border rounded" rows={3} onChange={(e) => setDescription(e.target.value)}></textarea>
+        </div>
+
+        {/* Prep Time / Cook Time / Servings */}
+        <div className="flex gap-2">
+          <div className="flex-1">
+            <label className="text-sm font-medium">Prep Time</label>
+            <input type="text" value={prep_time} className="w-full p-2 border rounded" onChange={(e) => setPrepTime(e.target.value)} />
+          </div>
+          <div className="flex-1">
+            <label className="text-sm font-medium">Cook Time</label>
+            <input type="text" value={cook_time} className="w-full p-2 border rounded" onChange={(e) => setCookTime(e.target.value)} />
+          </div>
+          <div className="flex-1">
+            <label className="text-sm font-medium">Servings</label>
+            <input type="number" value={servings} className="w-full p-2 border rounded" onChange={(e) => setServings(e.target.value)} />
+          </div>
+        </div>
+
+        {/* Difficulty */}
+        <div>
+          <label className="text-sm font-medium">Difficulty</label>
+          <select value={difficulty} className="w-full p-2 border rounded" onChange={(e) => setDifficulty(e.target.value)}>
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+          </select>
+        </div>
+
+        {/* Image URL */}
+        <div>
+          <label className="text-sm font-medium">Image URL</label>
+          <input type="text" value={image} className="w-full p-2 border rounded" onChange={(e) => setImage(e.target.value)} />
+        </div>
+
+        {/* Ingredients */}
+        <div>
+          <label className="text-sm font-medium">Ingredients (comma separated)</label>
+          <textarea value={ingredients?.join(', ')} className="w-full p-2 border rounded" rows={3} onChange={(e) => setIngredients(e.target.value.split(',').map(item => item.trim()))}></textarea>
+        </div>
+
+        {/* Instructions */}
+        <div>
+          <label className="text-sm font-medium">Instructions (one per line)</label>
+          <textarea value={instructions?.map(i => i.text).join('\n')} className="w-full p-2 border rounded" rows={5} onChange={(e) => setInstructions(e.target.value.split('\n').map(text => ({ text })))}></textarea>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex justify-end gap-4 mt-4">
+          <button
+            type="button"
+            className='bg-[#eeeded] text-black w-[100px] rounded py-2'
+            onClick={() => setEditPop(false)}
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            className='bg-blue-600 text-white w-[100px] rounded py-2'
+            onClick={() => Edit(props.id)}
+          >
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </>
 )}
 
-{EditPop && (
-  <div className="edit-popup">
-    <div className="edit-popup-content">
-      <h2>Edit Recipe</h2>
 
-      <div className="edit-form">
-
-        <label>Title</label>
-        <input 
-          type="text" 
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-
-        <label>Category ID</label>
-        <input 
-          type="text" 
-          value={category_id}
-          onChange={(e) => setCategory_id(e.target.value)}
-        />
-
-
-        <label>Country</label>
-        <input 
-          type="text" 
-          value={country}
-          onChange={(e) => setContry(e.target.value)}
-        />
-
-        <label>Description</label>
-        <textarea 
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-
-        <label>Prep Time</label>
-        <input 
-          type="text" 
-          value={prep_time}
-          onChange={(e) => setPrep_time(e.target.value)}
-        />
-
-        <label>Cook Time</label>
-        <input 
-          type="text" 
-          value={cook_time}
-          onChange={(e) => setCook_time(e.target.value)}
-        />
-
-        <label>Servings</label>
-        <input 
-          type="number" 
-          value={servings}
-          onChange={(e) => setServings(e.target.value)}
-        />
-
-        <label>Difficulty</label>
-        <input 
-          type="text" 
-          value={difficulty}
-          onChange={(e) => setDifficulty(e.target.value)}
-        />
-
-        {/* <label>Image URL</label>
-        <input 
-          type="text" 
-          
-        /> */}
-
-      </div>
-
-      <div className="edit-popup-buttons">
-        <button className="cancel-btn" onClick={() => setEditPop(false)}>Cancel</button>
-        <button className="save-btn" onClick={() => EditPopup(props.id)} >Save</button>
-      </div>
-
-    </div>
-  </div>
-)}
-
-
-
-
-
-      
-       
-     
-
-
-     
-          
-
-        
-
-    </div>
-  )
+     </>
+  );
 }
+
+export default Card;

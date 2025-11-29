@@ -12,13 +12,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-         <Routes>
-            <Route path="/manage" element={<ManageRecipes/>} />
-            <Route path='/add' element={<Add/>} />
-
-         </Routes>
-      </BrowserRouter>
+       <ManageRecipes/>
     </>
   )
 }

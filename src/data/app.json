@@ -66,10 +66,9 @@
       ]
     },
     {
-      "id": "4",
       "title": "Beef Tagine with Prunes",
       "category_id": "1",
-      "country": "Maroc",
+      "country": "Morroco",
       "description": "A sweet and savory Moroccan classic featuring tender beef and caramelized prunes.",
       "prep_time": "20 min",
       "cook_time": "120 min",
@@ -97,13 +96,13 @@
           "step": 3,
           "text": "Caramelize prunes and top the beef."
         }
-      ]
+      ],
+      "id": "4"
     },
     {
-      "id": "5",
       "title": "Seven Vegetable Couscous",
       "category_id": "1",
-      "country": "Maroc",
+      "country": "Morocco",
       "description": "The traditional Friday dish. Fluffy semolina grains steamed over a rich vegetable broth.",
       "prep_time": "45 min",
       "cook_time": "60 min",
@@ -132,17 +131,17 @@
           "step": 3,
           "text": "Add soft veggies later and serve."
         }
-      ]
+      ],
+      "id": "5"
     },
     {
-      "id": "6",
       "title": "Harira Soup",
       "category_id": "1",
-      "country": "Maroc",
+      "country": "Morroco",
       "description": "A hearty tomato-based soup with lentils and chickpeas.",
       "prep_time": "30 min",
       "cook_time": "45 min",
-      "servings": 6,
+      "servings": "10",
       "difficulty": "Medium",
       "image": "https://via.placeholder.com/600x400?text=Harira",
       "ingredients": [
@@ -166,7 +165,8 @@
           "step": 3,
           "text": "Thicken and add vermicelli."
         }
-      ]
+      ],
+      "id": "6"
     },
     {
       "id": "7",
@@ -232,38 +232,6 @@
         {
           "step": 3,
           "text": "Mash eggplant into mixture and cook down."
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "title": "Classic Caesar Salad",
-      "category_id": "5",
-      "country": "International",
-      "description": "Crisp romaine lettuce with parmesan and croutons.",
-      "prep_time": "20 min",
-      "cook_time": "0 min",
-      "servings": 2,
-      "difficulty": "Easy",
-      "image": "https://via.placeholder.com/600x400?text=Caesar+Salad",
-      "ingredients": [
-        "Romaine lettuce",
-        "Parmesan",
-        "Croutons",
-        "Caesar dressing"
-      ],
-      "instructions": [
-        {
-          "step": 1,
-          "text": "Chop lettuce."
-        },
-        {
-          "step": 2,
-          "text": "Toss with dressing."
-        },
-        {
-          "step": 3,
-          "text": "Top with cheese and croutons."
         }
       ]
     },

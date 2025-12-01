@@ -1,0 +1,57 @@
+.recipes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+ 
+}
+
+.text{
+text-align: center;
+color:#BDA18A;
+}
+
+.filtre-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.filtre-buttons button {
+  padding: 8px 16px;
+  border: 1px solid #222;
+  background: white;
+  color: #222;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.filtre-buttons button:hover {
+  background: #222;
+  color: white;
+}
+
+.filtre-buttons .active {
+  background: #222;
+  color: white;
+  border-color: #222;
+}
+
+.filtrepage {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.Recette p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.empty {
+  text-align: center;
+  color: gray;
+  margin-top: 20px;
+}

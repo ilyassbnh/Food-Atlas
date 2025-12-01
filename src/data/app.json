@@ -42,7 +42,7 @@
       "cook_time": "60 min",
       "servings": 4,
       "difficulty": "Medium",
-      "image": "https://via.placeholder.com/600x400?text=Chicken+Tagine",
+      "image": "/photo/recette2.jpg",
       "ingredients": ["1 whole chicken", "2 onions", "Garlic", "Ginger", "Turmeric", "Preserved lemon", "Green olives"],
       "instructions": [
         { "step": 1, "text": "Marinate chicken with spices and garlic." },
@@ -60,7 +60,7 @@
       "cook_time": "15 min",
       "servings": 2,
       "difficulty": "Easy",
-      "image": "https://via.placeholder.com/600x400?text=Quinoa+Salad",
+      "image":  "/photo/recette2.jpg",
       "ingredients": ["1 cup quinoa", "2 avocados", "Cucumber", "Cherry tomatoes", "Lemon dressing"],
       "instructions": [
         { "step": 1, "text": "Cook quinoa and let cool." },

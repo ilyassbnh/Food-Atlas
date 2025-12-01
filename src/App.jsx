@@ -1,13 +1,15 @@
 import { useState } from 'react'
+import Recipes from './pages/Recipes'
 
-import './App.css'
+import { BrowserRouter,Routes, Route } from 'react-router-dom'
 
 function App() {
 
   return (
-    <>
-    
-    </>
+     <>
+      <Recipes/>
+     </>
+
   )
 }
 

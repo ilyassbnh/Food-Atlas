@@ -13,8 +13,8 @@ const ManageRecipes = () => {
         <div className='flex place-content-between'>
           <input type="text" placeholder='Search By Name' onChange={(e) => setSearch(e.target.value)} className='w-[350px] p-[5px] bg-white rounded '   />
           <div className='flex gap-[10px]'>
-                 <button className='bg-green-600 text-white w-[150px] txt2 rounded' >Exit Dashboard</button>
-                 <button className='bg-blue-600 text-white w-[150px] txt2 rounded'>Add Recettes</button>
+                 <button className='bg-green-600 hover:bg-green-700 text-white w-[150px] txt2 rounded ' >Exit Dashboard</button>
+                 <button className='bg-blue-600 hover:bg-blue-700 text-white w-[150px] txt2 rounded'>Add Recettes</button>
           </div>
           
         </div>

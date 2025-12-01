@@ -72,7 +72,7 @@
       "description": "A sweet and savory Moroccan classic featuring tender beef and caramelized prunes.",
       "prep_time": "20 min",
       "cook_time": "120 min",
-      "servings": 4,
+      "servings": "5",
       "difficulty": "Medium",
       "image": "https://via.placeholder.com/600x400?text=Beef+Tagine",
       "ingredients": [
@@ -334,14 +334,13 @@
       ]
     },
     {
-      "id": "15",
       "title": "Shakshuka",
       "category_id": "5",
       "country": "Middle East",
       "description": "Eggs poached in a sauce of tomatoes and peppers.",
       "prep_time": "10 min",
       "cook_time": "20 min",
-      "servings": 3,
+      "servings": "4",
       "difficulty": "Easy",
       "image": "https://via.placeholder.com/600x400?text=Shakshuka",
       "ingredients": [
@@ -364,40 +363,8 @@
           "step": 3,
           "text": "Crack eggs into sauce and cover."
         }
-      ]
-    },
-    {
-      "id": "16",
-      "title": "Beef Tacos",
-      "category_id": "3",
-      "country": "Mexique",
-      "description": "Mexican street-style tacos with seasoned ground beef.",
-      "prep_time": "15 min",
-      "cook_time": "15 min",
-      "servings": 4,
-      "difficulty": "Easy",
-      "image": "https://via.placeholder.com/600x400?text=Tacos",
-      "ingredients": [
-        "Corn tortillas",
-        "Ground beef",
-        "Lime",
-        "Cilantro",
-        "Onion"
       ],
-      "instructions": [
-        {
-          "step": 1,
-          "text": "Brown beef with seasoning."
-        },
-        {
-          "step": 2,
-          "text": "Warm tortillas."
-        },
-        {
-          "step": 3,
-          "text": "Assemble with fresh toppings."
-        }
-      ]
+      "id": "15"
     },
     {
       "id": "17",

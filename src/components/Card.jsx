@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Card.css'
 import axios from "axios"
+import { toast, Toaster } from 'sonner';
 const Card = (props) => {
 
    
@@ -29,6 +30,7 @@ const Card = (props) => {
         console.log(err)
       })
       setDeletePop(false)
+      toast.success("recepie has been deleted")
    }
 
    const Edit = (id) =>{
@@ -51,6 +53,7 @@ const Card = (props) => {
       console.log(err)
     })
      setEditPop(false)
+     toast.success("recepie has been modified")
       
    }
 
@@ -64,9 +67,9 @@ const Card = (props) => {
    <div className='flex flex-col'>
       <h6>{props.title}</h6>
       <p className='text-sm'>{props.country}</p>
-      <div className='flex justify-center gap-[10px] mt-2'>
-         <button className='bg-[#eeeded] txt w-[100px]  rounded' onClick={() =>setEditPop(true)}>Edit</button>
-         <button className='bg-red-500 text-white txt w-[100px]  rounded' onClick={() =>setDeletePop(true)}>Delete</button>
+      <div className='flex justify-center gap-[25px] mt-2'>
+         <button className='bg-[#eeeded] hover:bg-gray-300 txt text-black w-[80px] h-[30px]  rounded' onClick={() =>setEditPop(true)}>Edit</button>
+         <button className='bg-red-500 hover:bg-red-600 text-white txt w-[80px] h-[30px]  rounded' onClick={() =>setDeletePop(true)}>Delete</button>
       </div>
    </div>
 </div>
@@ -79,9 +82,9 @@ const Card = (props) => {
           <h3>Are you sure you want to delete</h3>
           <h6 className='pt-[20px]'>{props.title} from {props.country}</h6>
           <div className='flex justify-center gap-[100px] place-content-around place-content-between mt-[50px]'>
-            <button className='bg-[#eeeded] text-black w-[100px] rounded' onClick={() =>setDeletePop(false)} >Cancel</button>
+            <button className='bg-[#eeeded] hover:bg-gray-300 text-black w-[100px] rounded  h-[40px]' onClick={() =>setDeletePop(false)} >Cancel</button>
 
-            <button className='bg-red-500 text-white w-[100px] rounded' onClick={() =>Delete(props.id)}>Delete</button>
+            <button className='bg-red-500 hover:bg-red-600 text-white w-[100px] rounded  h-[40px]' onClick={() =>Delete(props.id)}>Delete</button>
 
           </div>
       </div>
@@ -174,14 +177,14 @@ const Card = (props) => {
         <div className="flex justify-end gap-4 mt-4">
           <button
             type="button"
-            className='bg-[#eeeded] text-black w-[100px] rounded py-2'
+            className='bg-[#eeeded] hover:bg-gray-300 text-black w-[100px] rounded py-2'
             onClick={() => setEditPop(false)}
           >
             Cancel
           </button>
           <button
             type="submit"
-            className='bg-blue-600 text-white w-[100px] rounded py-2'
+            className='bg-blue-600 hover:bg-blue-700 text-white w-[100px] rounded py-2'
             onClick={() => Edit(props.id)}
           >
             Save

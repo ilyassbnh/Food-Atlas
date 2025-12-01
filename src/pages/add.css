@@ -1,8 +1,8 @@
 .formule {
-   width: 350px;
+   width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background: #fffdfd;
+  background: #eeeded;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   display: flex;
@@ -19,7 +19,7 @@
     cursor: pointer;
 }
 .formule input {
-    width: 300px;
+    width: 600px;
     height: 50px;
     border: 1px solid #ccc;
     border-radius: 5px;

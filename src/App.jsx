@@ -1,28 +1,33 @@
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import './App.css'
-import './pages/Contact'
-import Contact from './pages/Contact'
-import { BrowserRouter,Routes, Route } from 'react-router-dom'
-import Test from './components/Test'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Cloudinary } from '@cloudinary/url-gen';
+import { auto } from '@cloudinary/url-gen/actions/resize';
+import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
+import { AdvancedImage } from '@cloudinary/react';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import RecipeDetails from './pages/RecipeDetails';
+import Contact from './pages/Contact';
+import Test from './components/Test';
+import './App.css';
 
 function App() {
+  const cld = new Cloudinary({
+    cloud: { cloudName: 'dtpjdj7m4' }
+  });
 
   return (
-    <>
-       <BrowserRouter>
-       <Navbar/>
-         <Routes>
-                <Route path='/' element={<Home/>} />
-                <Route path='/contact' element={<Contact/>} />
-                <Route path='/test' element={<Test/>} />
+    <BrowserRouter>
+      <Navbar />
 
-
-         </Routes>
-       
-       </BrowserRouter>
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recipes/:id" element={<RecipeDetails />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/test" element={<Test />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

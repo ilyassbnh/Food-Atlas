@@ -33,15 +33,7 @@
       "servings": 4,
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580048/Recette_de_tajine_de_poulet_%C3%A0_la_marocaine___Recette_imprimable_traditionnelle_et_facile_wuhojm.jpg",
-      "ingredients": [
-        "1 whole chicken",
-        "2 onions",
-        "Garlic",
-        "Ginger",
-        "Turmeric",
-        "Preserved lemon",
-        "Green olives"
-      ],
+      "ingredients": ["1 whole chicken", "2 onions", "Garlic", "Ginger", "Turmeric", "Preserved lemon", "Green olives"],
       "instructions": [
         "Marinate chicken with spices and garlic.",
         "Sauté onions, add chicken, and simmer.",
@@ -59,13 +51,7 @@
       "servings": 2,
       "difficulty": "Easy",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580165/6caeea8b86a626b4678488234d00a6e7_swkshi.jpg",
-      "ingredients": [
-        "1 cup quinoa",
-        "2 avocados",
-        "Cucumber",
-        "Cherry tomatoes",
-        "Lemon dressing"
-      ],
+      "ingredients": ["1 cup quinoa", "2 avocados", "Cucumber", "Cherry tomatoes", "Lemon dressing"],
       "instructions": [
         "Cook quinoa and let cool.",
         "Chop vegetables.",
@@ -83,13 +69,7 @@
       "servings": 2,
       "difficulty": "Hard",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580202/1751a1eee320a9562d982c760246b1fa_bsthgk.jpg",
-      "ingredients": [
-        "100g dark chocolate",
-        "100g butter",
-        "2 eggs",
-        "Sugar",
-        "Flour"
-      ],
+      "ingredients": ["100g dark chocolate", "100g butter", "2 eggs", "Sugar", "Flour"],
       "instructions": [
         "Melt chocolate and butter.",
         "Whisk eggs/sugar, fold in chocolate and flour.",
@@ -107,14 +87,7 @@
       "servings": 4,
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580245/ea228ce9cd9e0d2ed76054b778a67633_drvsot.jpg",
-      "ingredients": [
-        "1kg beef shank",
-        "200g prunes",
-        "Onions",
-        "Cinnamon",
-        "Honey",
-        "Almonds"
-      ],
+      "ingredients": ["1kg beef shank", "200g prunes", "Onions", "Cinnamon", "Honey", "Almonds"],
       "instructions": [
         "Sear beef with onions.",
         "Simmer with spices for 1.5 hours.",
@@ -132,15 +105,7 @@
       "servings": 6,
       "difficulty": "Hard",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580303/6c7249633135c18f8cd38a9bc0fe33d0_rrettz.jpg",
-      "ingredients": [
-        "Couscous",
-        "Lamb/Chicken",
-        "Carrots",
-        "Zucchini",
-        "Turnips",
-        "Pumpkin",
-        "Chickpeas"
-      ],
+      "ingredients": ["Couscous", "Lamb/Chicken", "Carrots", "Zucchini", "Turnips", "Pumpkin", "Chickpeas"],
       "instructions": [
         "Steam couscous grains 3 times.",
         "Cook meat and hard veggies in broth.",
@@ -158,14 +123,7 @@
       "servings": 6,
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580688/6c1aeabccbaae35006bd1eb8ea4b9ffb_xftqee.jpg",
-      "ingredients": [
-        "Tomatoes",
-        "Lentils",
-        "Chickpeas",
-        "Celery",
-        "Parsley",
-        "Vermicelli"
-      ],
+      "ingredients": ["Tomatoes", "Lentils", "Chickpeas", "Celery", "Parsley", "Vermicelli"],
       "instructions": [
         "Sauté herbs and onions.",
         "Simmer with tomatoes and lentils.",
@@ -183,14 +141,7 @@
       "servings": 8,
       "difficulty": "Hard",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580738/f05bae9f08a2936b900db7d5698e1a89_kbzqxe.jpg",
-      "ingredients": [
-        "Warqa dough",
-        "Chicken",
-        "Almonds",
-        "Sugar",
-        "Cinnamon",
-        "Eggs"
-      ],
+      "ingredients": ["Warqa dough", "Chicken", "Almonds", "Sugar", "Cinnamon", "Eggs"],
       "instructions": [
         "Cook and shred chicken.",
         "Cook eggs in onion sauce.",
@@ -208,13 +159,7 @@
       "servings": 4,
       "difficulty": "Easy",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580773/7fcf19bb3d3c7d65cdfe278d89586faf_fg6zvw.jpg",
-      "ingredients": [
-        "Eggplants",
-        "Tomatoes",
-        "Garlic",
-        "Cumin",
-        "Paprika"
-      ],
+      "ingredients": ["Eggplants", "Tomatoes", "Garlic", "Cumin", "Paprika"],
       "instructions": [
         "Roast eggplants.",
         "Sauté tomatoes and spices.",
@@ -232,13 +177,7 @@
       "servings": 2,
       "difficulty": "Easy",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580817/03cc88306036dfae8423c5c1762dc15a_p8rutz.jpg",
-      "ingredients": [
-        "Salmon fillet",
-        "Brown rice",
-        "Avocado",
-        "Edamame",
-        "Soy sauce"
-      ],
+      "ingredients": ["Salmon fillet", "Brown rice", "Avocado", "Edamame", "Soy sauce"],
       "instructions": [
         "Cook brown rice.",
         "Grill salmon.",
@@ -256,12 +195,7 @@
       "servings": 2,
       "difficulty": "Easy",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580860/f9bea17b6ace81729c5183fe4793c44b_trawcf.jpg",
-      "ingredients": [
-        "Romaine lettuce",
-        "Parmesan",
-        "Croutons",
-        "Caesar dressing"
-      ],
+      "ingredients": ["Romaine lettuce", "Parmesan", "Croutons", "Caesar dressing"],
       "instructions": [
         "Chop lettuce.",
         "Toss with dressing.",
@@ -279,13 +213,7 @@
       "servings": 2,
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580962/48285145054a6d747befd1a2a6700924_ghf6i1.jpg",
-      "ingredients": [
-        "Spaghetti",
-        "Guanciale/Bacon",
-        "Pecorino",
-        "Eggs",
-        "Pepper"
-      ],
+      "ingredients": ["Spaghetti", "Guanciale/Bacon", "Pecorino", "Eggs", "Pepper"],
       "instructions": [
         "Boil pasta and fry bacon.",
         "Whisk eggs and cheese.",
@@ -303,12 +231,7 @@
       "servings": 2,
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580997/57e7a19334571946391a7430fcb86202_mhqrz5.jpg",
-      "ingredients": [
-        "Dough",
-        "San Marzano tomatoes",
-        "Mozzarella",
-        "Basil"
-      ],
+      "ingredients": ["Dough", "San Marzano tomatoes", "Mozzarella", "Basil"],
       "instructions": [
         "Stretch dough.",
         "Add sauce and cheese.",
@@ -326,12 +249,7 @@
       "servings": 4,
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581048/939af88de8b75ea4c6488c7a7c6419f8_z3ghog.jpg",
-      "ingredients": [
-        "Ground beef",
-        "American cheese",
-        "Brioche buns",
-        "Pickles"
-      ],
+      "ingredients": ["Ground beef", "American cheese", "Brioche buns", "Pickles"],
       "instructions": [
         "Smash beef balls onto hot griddle.",
         "Flip, add cheese.",
@@ -349,13 +267,7 @@
       "servings": 4,
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581079/68285d522788922f3fed6b4d8d185084_eguiau.jpg",
-      "ingredients": [
-        "Chicken",
-        "Yogurt",
-        "Garam Masala",
-        "Tomato puree",
-        "Cream"
-      ],
+      "ingredients": ["Chicken", "Yogurt", "Garam Masala", "Tomato puree", "Cream"],
       "instructions": [
         "Marinate and grill chicken.",
         "Simmer spiced tomato sauce.",
@@ -373,13 +285,7 @@
       "servings": 3,
       "difficulty": "Easy",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581110/28aab2440fe80f51921d630a825571dc_iuzco1.jpg",
-      "ingredients": [
-        "Eggs",
-        "Tomatoes",
-        "Peppers",
-        "Onion",
-        "Cumin"
-      ],
+      "ingredients": ["Eggs", "Tomatoes", "Peppers", "Onion", "Cumin"],
       "instructions": [
         "Sauté veggies and spices.",
         "Add tomatoes and simmer.",
@@ -397,13 +303,7 @@
       "servings": 4,
       "difficulty": "Easy",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581147/3241880813fac1480cabf86d28fbdc48_mlfoo1.jpg",
-      "ingredients": [
-        "Corn tortillas",
-        "Ground beef",
-        "Lime",
-        "Cilantro",
-        "Onion"
-      ],
+      "ingredients": ["Corn tortillas", "Ground beef", "Lime", "Cilantro", "Onion"],
       "instructions": [
         "Brown beef with seasoning.",
         "Warm tortillas.",
@@ -421,13 +321,7 @@
       "servings": 2,
       "difficulty": "Hard",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581179/d26ca7c688128542ebc5e9d491db1b6e_kj3his.jpg",
-      "ingredients": [
-        "Ramen noodles",
-        "Stock",
-        "Soy sauce",
-        "Egg",
-        "Nori"
-      ],
+      "ingredients": ["Ramen noodles", "Stock", "Soy sauce", "Egg", "Nori"],
       "instructions": [
         "Simmer broth.",
         "Cook noodles.",
@@ -445,13 +339,7 @@
       "servings": 1,
       "difficulty": "Easy",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581215/61d0525e6197ac32cc724c651463418c_dhsihu.jpg",
-      "ingredients": [
-        "Acai pack",
-        "Banana",
-        "Granola",
-        "Berries",
-        "Honey"
-      ],
+      "ingredients": ["Acai pack", "Banana", "Granola", "Berries", "Honey"],
       "instructions": [
         "Blend acai and banana.",
         "Pour into bowl.",
@@ -469,14 +357,7 @@
       "servings": 9,
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581248/fd9ec12ea9c0287f551537da3dc75605_jeuxpm.jpg",
-      "ingredients": [
-        "Dark chocolate",
-        "Butter",
-        "Sugar",
-        "Eggs",
-        "Cocoa",
-        "Flour"
-      ],
+      "ingredients": ["Dark chocolate", "Butter", "Sugar", "Eggs", "Cocoa", "Flour"],
       "instructions": [
         "Melt butter and chocolate.",
         "Whisk sugar/eggs, fold dry ingredients.",
@@ -494,13 +375,7 @@
       "servings": 12,
       "difficulty": "Hard",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581277/dea01a87b4e0389b06ea43a19e6af30c_j21h6j.jpg",
-      "ingredients": [
-        "Cream cheese",
-        "Sugar",
-        "Eggs",
-        "Vanilla",
-        "Biscuits"
-      ],
+      "ingredients": ["Cream cheese", "Sugar", "Eggs", "Vanilla", "Biscuits"],
       "instructions": [
         "Press biscuit base into pan.",
         "Beat filling ingredients.",
@@ -518,13 +393,7 @@
       "servings": 8,
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581304/261026b6b2cfa878dad54b25d2ce9324_icpirj.jpg",
-      "ingredients": [
-        "Pastry flour",
-        "Butter",
-        "Lemons",
-        "Eggs",
-        "Sugar"
-      ],
+      "ingredients": ["Pastry flour", "Butter", "Lemons", "Eggs", "Sugar"],
       "instructions": [
         "Bake pastry shell.",
         "Cook lemon curd.",
@@ -542,13 +411,7 @@
       "servings": 4,
       "difficulty": "Medium",
       "image": "https://i.pinimg.com/736x/a5/37/54/a5375465810cb96c373e44c9df281122.jpg",
-      "ingredients": [
-        "Chickpeas",
-        "Parsley",
-        "Garlic",
-        "Cumin",
-        "Flatbread"
-      ],
+      "ingredients": ["Chickpeas", "Parsley", "Garlic", "Cumin", "Flatbread"],
       "instructions": [
         "Blend chickpeas and herbs.",
         "Form balls and fry.",
@@ -566,13 +429,7 @@
       "servings": 2,
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581366/2a5e8a907d7251e615def015b7ae8e6b_utfleo.jpg",
-      "ingredients": [
-        "Rice noodles",
-        "Shrimp",
-        "Tofu",
-        "Peanuts",
-        "Tamarind"
-      ],
+      "ingredients": ["Rice noodles", "Shrimp", "Tofu", "Peanuts", "Tamarind"],
       "instructions": [
         "Soak noodles.",
         "Stir fry shrimp and tofu.",

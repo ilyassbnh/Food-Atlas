@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import Add from '../pages/Admin/AddRecipe.jsx'
+import Add from './pages/Admin/AddRecipe.jsx'
 import { BrowserRouter ,Routes, Route , } from 'react-router-dom'
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Cloudinary } from '@cloudinary/url-gen';
 import { auto } from '@cloudinary/url-gen/actions/resize';
 import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
@@ -14,7 +13,6 @@ import Contact from './pages/Contact';
 import Test from './components/Test';
 import Recipes from './pages/Recipes';
 import ManageRecipes from './pages/Admin/ManageRecipes'
-
 import './App.css';
 import { Toaster } from 'sonner';
 
@@ -33,7 +31,8 @@ function App() {
         <Route path="/recipes" element={<Recipes/>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/test" element={<Test />} />
-        <Route path="/admin/add-recipe" element={<Add />} />
+        <Route path="/add" element={<Add />} />
+        <Route path="/manage" element={<ManageRecipes />} />
       </Routes>
     </BrowserRouter>
   );

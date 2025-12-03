@@ -4,6 +4,64 @@ import axios from "axios"
 import { toast, Toaster } from 'sonner';
 const Card = (props) => {
 
+
+const uploadImageToCloudinary = async (file) => {
+  console.log("🔵 Starting Cloudinary upload…");
+  console.log("📁 File received:", file);
+
+  if (!file) {
+    console.error("❌ No file provided to uploadImageToCloudinary");
+    toast.error("No file selected");
+    return null;
+  }
+
+  try {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "unsigned_preset");
+
+    console.log("📤 Sending upload request to Cloudinary...");
+
+    const response = await fetch(
+      "https://api.cloudinary.com/v1_1/dtpjdj7m4/image/upload",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    console.log("🟡 Cloudinary raw response:", response);
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("❌ Cloudinary upload failed. Status:", response.status);
+      console.error("🔍 Cloudinary error response:", errorText);
+      toast.error("Cloudinary upload failed");
+      return null;
+    }
+
+    const data = await response.json();
+    console.log("🟢 Cloudinary upload success:", data);
+
+    if (!data.secure_url) {
+      console.error("❌ secure_url missing in Cloudinary response:", data);
+      toast.error("Cloudinary did not return an image URL");
+      return null;
+    }
+
+    console.log("✅ Final image URL:", data.secure_url);
+    return data.secure_url;
+
+  } catch (error) {
+    console.error("💥 Exception thrown during Cloudinary upload:");
+    console.error(error);
+    toast.error("Unexpected error — check console");
+    return null;
+  }
+};
+
+
+
    
 
    const [EditPop,setEditPop] = useState(false)
@@ -61,12 +119,12 @@ const Card = (props) => {
     <>
     
    
-   <div style={{ animation: `fadeInUp 0.5s ease-out forwards`, ...props.style }} className='box flex flex-col w-64 h-[280px] bg-white p-2 text-center rounded-sm transform transition hover:scale-105 animate-fadeInUp'>
-   <div className='bg-[url(/public/tajine.jpg)] bg-no-repeat bg-cover w-[240px] h-[165px] rounded-sm'></div>
+   <div style={{ animation: `fadeInUp 0.5s ease-out forwards`, ...props.style }} className='box flex flex-col w-64  min-h-[280px] bg-white p-2 text-center rounded-sm transform transition hover:scale-105 animate-fadeInUp'>
+   <div className=' bg-no-repeat bg-cover w-[240px] h-[165px] rounded-sm bg-center' style={{ backgroundImage: `url(${image})` }}></div>
 
    <div className='flex flex-col'>
-      <h6>{props.title}</h6>
-      <p className='text-sm'>{props.country}</p>
+      <h6>{title}</h6>
+      <p className='text-sm'>{country}</p>
       <div className='flex justify-center gap-[25px] mt-2'>
          <button className='bg-[#eeeded] hover:bg-gray-300 txt text-black w-[80px] h-[30px]  rounded' onClick={() =>setEditPop(true)}>Edit</button>
          <button className='bg-red-500 hover:bg-red-600 text-white txt w-[80px] h-[30px]  rounded' onClick={() =>setDeletePop(true)}>Delete</button>
@@ -80,7 +138,7 @@ const Card = (props) => {
       <div className="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
       <div className=' fixed top-[200px] left-[420px]    w-[350px] h-[250px] rounded-md box bg-white flex  flex-col text-start p-4 z-50 '>
           <h3>Are you sure you want to delete</h3>
-          <h6 className='pt-[20px]'>{props.title} from {props.country}</h6>
+          <h6 className='pt-[20px]'>{title} from {country}</h6>
           <div className='flex justify-center gap-[100px] place-content-around place-content-between mt-[50px]'>
             <button className='bg-[#eeeded] hover:bg-gray-300 text-black w-[100px] rounded  h-[40px]' onClick={() =>setDeletePop(false)} >Cancel</button>
 
@@ -156,10 +214,26 @@ const Card = (props) => {
         </div>
 
         {/* Image URL */}
-        <div>
-          <label className="text-sm font-medium">Image URL</label>
-          <input type="text" value={image} className="w-full p-2 border rounded" onChange={(e) => setImage(e.target.value)} />
-        </div>
+        {/* Image Upload */}
+<input
+  type="file"
+  accept="image/*"
+  className="w-full p-2 border rounded"
+  onChange={ async (e) => {
+    const file = e.target.files[0];
+    if (!file) return; // user canceled selection → do nothing
+
+    const url = await uploadImageToCloudinary(file);
+
+    if (url) {
+      setImage(url);
+    } else {
+      toast.error("Image upload failed — keeping old image");
+    }
+  }}
+/>
+
+
 
         {/* Ingredients */}
         <div>
@@ -169,8 +243,8 @@ const Card = (props) => {
 
         {/* Instructions */}
         <div>
-          <label className="text-sm font-medium">Instructions (one per line)</label>
-          <textarea value={instructions?.map(i => i.text).join('\n')} className="w-full p-2 border rounded" rows={5} onChange={(e) => setInstructions(e.target.value.split('\n').map(text => ({ text })))}></textarea>
+          <label className="text-sm font-medium">Instructions (comma separated)</label>
+          <textarea value={instructions?.join(', ')} className="w-full p-2 border rounded" rows={5} onChange={(e) => setInstructions(e.target.value.split(',').map(item => item.trim()))}></textarea>
         </div>
 
         {/* Buttons */}

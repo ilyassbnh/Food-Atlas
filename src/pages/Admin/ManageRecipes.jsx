@@ -13,15 +13,15 @@ const ManageRecipes = () => {
         <div className='flex place-content-between'>
           <input type="text" placeholder='Search By Name' onChange={(e) => setSearch(e.target.value)} className='w-[350px] p-[5px] bg-white rounded '   />
           <div className='flex gap-[10px]'>
-                 <button className='bg-green-600 hover:bg-green-700 text-white w-[150px] txt2 rounded ' >Exit Dashboard</button>
-                 <button className='bg-blue-600 hover:bg-blue-700 text-white w-[150px] txt2 rounded'>Add Recettes</button>
+                 <button className='bg-green-600 hover:bg-green-700 text-white w-[150px] txt2 rounded ' >Go To Home</button>
+                 <button className='bg-blue-600 hover:bg-blue-700 text-white w-[150px] txt2 rounded'>Add Recepies</button>
           </div>
           
         </div>
         <div className='h-px w-full bg-black '/>
           
       
-       <div className='grid grid-cols-4 gap-[10px]'>
+       <div className='grid grid-cols-4 gap-[30px]'>
             {food.recipes.filter((index)=>{
               if(search ===""){
                 return index

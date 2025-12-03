@@ -3,67 +3,54 @@
     {
       "id": "1",
       "name": "Maroc",
-      "image": "https://via.placeholder.com/300x200?text=Maroc"
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764583183/d9daa57fc3a2e01b69d20cad8d2c2d2e_zxuqpt.jpg"
     },
     {
       "id": "2",
       "name": "Italie",
-      "image": "https://via.placeholder.com/300x200?text=Italie"
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581487/b4d0d548fc44356bc841260943da88e5_d6j9dx.jpg"
     },
     {
       "id": "3",
       "name": "Mexique",
-      "image": "https://via.placeholder.com/300x200?text=Mexique"
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764583223/d68aaddc84842cefc3f6b91a526444e2_adxywa.jpg"
     },
     {
       "id": "4",
       "name": "Asie",
-      "image": "https://via.placeholder.com/300x200?text=Asie"
-    },
-    {
-      "id": "5",
-      "name": "Healthy",
-      "image": "https://via.placeholder.com/300x200?text=Healthy"
-    },
-    {
-      "id": "6",
-      "name": "Desserts",
-      "image": "https://via.placeholder.com/300x200?text=Desserts"
+      "image": "https://i.pinimg.com/1200x/ad/62/04/ad6204815600f1a3b26f3036a0818dbd.jpg"
     }
   ],
   "recipes": [
     {
-      "id": "3",
-      "title": "Chocolate lava Cake",
-      "category_id": "6",
-      "country": "morroco",
-      "description": "Decadent individual cakes with a molten chocolate center.",
+      "title": "Traditional Chicken Tagine",
+      "category_id": "1",
+      "country": "Morroco",
+      "description": "A classic Moroccan dish slow-cooked with preserved lemons and olives.",
       "prep_time": "20 min",
-      "cook_time": "12 min",
-      "servings": "3",
-      "difficulty": "Hard",
-      "image": "https://via.placeholder.com/600x400?text=Lava+Cake",
+      "cook_time": "60 min",
+      "servings": 4,
+      "difficulty": "Medium",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580048/Recette_de_tajine_de_poulet_%C3%A0_la_marocaine___Recette_imprimable_traditionnelle_et_facile_wuhojm.jpg",
       "ingredients": [
-        "100g dark chocolate",
-        "100g butter",
-        "2 eggs",
-        "Sugar",
-        "Flour"
+        "1 whole chicken",
+        "2 onions",
+        "Garlic",
+        "Ginger",
+        "Turmeric",
+        "Preserved lemon",
+        "Green olives",
+        "aaaaaaaaaaa"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Melt chocolate and butter."
-        },
-        {
-          "step": 2,
-          "text": "Whisk eggs/sugar, fold in chocolate and flour."
-        },
-        {
-          "step": 3,
-          "text": "Bake at 200°C for 12 minutes."
-        }
-      ]
+        "Marinate chicken with spices and garlic.",
+        "Sauté onions",
+        "add chicken",
+        "and simmer.",
+        "Add olives and lemon near the end.",
+        "aaaaaaaaaaaaaaaaaaaa"
+      ],
+      "id": "1"
     },
     {
       "title": "Beef Tagine with Prunes",
@@ -74,7 +61,7 @@
       "cook_time": "120 min",
       "servings": "5",
       "difficulty": "Medium",
-      "image": "https://via.placeholder.com/600x400?text=Beef+Tagine",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580245/ea228ce9cd9e0d2ed76054b778a67633_drvsot.jpg",
       "ingredients": [
         "1kg beef shank",
         "200g prunes",
@@ -84,20 +71,10 @@
         "Almonds"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Sear beef with onions."
-        },
-        {
-          "step": 2,
-          "text": "Simmer with spices for 1.5 hours."
-        },
-        {
-          "step": 3,
-          "text": "Caramelize prunes and top the beef."
-        }
-      ],
-      "id": "4"
+        "Sear beef with onions.",
+        "Simmer with spices for 1.5 hours.",
+        "Caramelize prunes and top the beef."
+      ]
     },
     {
       "title": "Seven Vegetable Couscous",
@@ -108,7 +85,7 @@
       "cook_time": "60 min",
       "servings": 6,
       "difficulty": "Hard",
-      "image": "https://via.placeholder.com/600x400?text=Couscous",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580303/6c7249633135c18f8cd38a9bc0fe33d0_rrettz.jpg",
       "ingredients": [
         "Couscous",
         "Lamb/Chicken",
@@ -119,20 +96,10 @@
         "Chickpeas"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Steam couscous grains 3 times."
-        },
-        {
-          "step": 2,
-          "text": "Cook meat and hard veggies in broth."
-        },
-        {
-          "step": 3,
-          "text": "Add soft veggies later and serve."
-        }
-      ],
-      "id": "5"
+        "Steam couscous grains 3 times.",
+        "Cook meat and hard veggies in broth.",
+        "Add soft veggies later and serve."
+      ]
     },
     {
       "title": "Harira Soup",
@@ -143,7 +110,7 @@
       "cook_time": "45 min",
       "servings": "10",
       "difficulty": "Medium",
-      "image": "https://via.placeholder.com/600x400?text=Harira",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580688/6c1aeabccbaae35006bd1eb8ea4b9ffb_xftqee.jpg",
       "ingredients": [
         "Tomatoes",
         "Lentils",
@@ -153,20 +120,10 @@
         "Vermicelli"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Sauté herbs and onions."
-        },
-        {
-          "step": 2,
-          "text": "Simmer with tomatoes and lentils."
-        },
-        {
-          "step": 3,
-          "text": "Thicken and add vermicelli."
-        }
-      ],
-      "id": "6"
+        "Sauté herbs and onions.",
+        "Simmer with tomatoes and lentils.",
+        "Thicken and add vermicelli."
+      ]
     },
     {
       "id": "7",
@@ -178,7 +135,7 @@
       "cook_time": "40 min",
       "servings": 8,
       "difficulty": "Hard",
-      "image": "https://via.placeholder.com/600x400?text=Pastilla",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580738/f05bae9f08a2936b900db7d5698e1a89_kbzqxe.jpg",
       "ingredients": [
         "Warqa dough",
         "Chicken",
@@ -188,22 +145,12 @@
         "Eggs"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Cook and shred chicken."
-        },
-        {
-          "step": 2,
-          "text": "Cook eggs in onion sauce."
-        },
-        {
-          "step": 3,
-          "text": "Layer dough, fillings, and bake."
-        }
+        "Cook and shred chicken.",
+        "Cook eggs in onion sauce.",
+        "Layer dough, fillings, and bake."
       ]
     },
     {
-      "id": "8",
       "title": "Zaalouk",
       "category_id": "1",
       "country": "Maroc",
@@ -212,7 +159,7 @@
       "cook_time": "20 min",
       "servings": 4,
       "difficulty": "Easy",
-      "image": "https://via.placeholder.com/600x400?text=Zaalouk",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580997/57e7a19334571946391a7430fcb86202_mhqrz5.jpg",
       "ingredients": [
         "Eggplants",
         "Tomatoes",
@@ -221,22 +168,60 @@
         "Paprika"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Roast eggplants."
-        },
-        {
-          "step": 2,
-          "text": "Sauté tomatoes and spices."
-        },
-        {
-          "step": 3,
-          "text": "Mash eggplant into mixture and cook down."
-        }
+        "Roast eggplants.",
+        "Sauté tomatoes and spices.",
+        "Mash eggplant into mixture and cook down."
+      ],
+      "id": "8"
+    },
+    {
+      "id": "9",
+      "title": "Grilled Salmon Bowl",
+      "category_id": "5",
+      "country": "International",
+      "description": "Omega-3 rich salmon served over brown rice.",
+      "prep_time": "15 min",
+      "cook_time": "10 min",
+      "servings": 2,
+      "difficulty": "Easy",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580817/03cc88306036dfae8423c5c1762dc15a_p8rutz.jpg",
+      "ingredients": [
+        "Salmon fillet",
+        "Brown rice",
+        "Avocado",
+        "Edamame",
+        "Soy sauce"
+      ],
+      "instructions": [
+        "Cook brown rice.",
+        "Grill salmon.",
+        "Assemble bowl with veggies."
       ]
     },
     {
-      "id": "11",
+      "title": "Classic Caesar Salades",
+      "category_id": "5",
+      "country": "International",
+      "description": "Crisp romaine lettuce with parmesan and croutons.",
+      "prep_time": "20 min",
+      "cook_time": "0 min",
+      "servings": 2,
+      "difficulty": "Easy",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580860/f9bea17b6ace81729c5183fe4793c44b_trawcf.jpg",
+      "ingredients": [
+        "Romaine lettuce",
+        "Parmesan",
+        "Croutons",
+        "Caesar dressing"
+      ],
+      "instructions": [
+        "Chop lettuce.",
+        "Toss with dressing.",
+        "Top with cheese and croutons."
+      ],
+      "id": "10"
+    },
+    {
       "title": "Spaghetti Carbonara",
       "category_id": "2",
       "country": "Italie",
@@ -245,7 +230,7 @@
       "cook_time": "15 min",
       "servings": 2,
       "difficulty": "Medium",
-      "image": "https://via.placeholder.com/600x400?text=Carbonara",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580997/57e7a19334571946391a7430fcb86202_mhqrz5.jpg",
       "ingredients": [
         "Spaghetti",
         "Guanciale/Bacon",
@@ -254,19 +239,34 @@
         "Pepper"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Boil pasta and fry bacon."
-        },
-        {
-          "step": 2,
-          "text": "Whisk eggs and cheese."
-        },
-        {
-          "step": 3,
-          "text": "Toss hot pasta with egg mix off heat."
-        }
-      ]
+        "Boil pasta and fry bacon.",
+        "Whisk eggs and cheese.",
+        "Toss hot pasta with egg mix off heat."
+      ],
+      "id": "11"
+    },
+    {
+      "title": "Margherita Pizza",
+      "category_id": "2",
+      "country": "Italie",
+      "description": "Neapolitan classic with tomato sauce and mozzarella.",
+      "prep_time": "120 min",
+      "cook_time": "10 min",
+      "servings": 2,
+      "difficulty": "Medium",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580997/57e7a19334571946391a7430fcb86202_mhqrz5.jpg",
+      "ingredients": [
+        "Dough",
+        "San Marzano tomatoes",
+        "Mozzarella",
+        "Basil"
+      ],
+      "instructions": [
+        "Stretch dough.",
+        "Add sauce and cheese.",
+        "Bake at max heat."
+      ],
+      "id": "12"
     },
     {
       "id": "13",
@@ -278,7 +278,7 @@
       "cook_time": "10 min",
       "servings": 4,
       "difficulty": "Medium",
-      "image": "https://via.placeholder.com/600x400?text=Burger",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581048/939af88de8b75ea4c6488c7a7c6419f8_z3ghog.jpg",
       "ingredients": [
         "Ground beef",
         "American cheese",
@@ -286,18 +286,9 @@
         "Pickles"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Smash beef balls onto hot griddle."
-        },
-        {
-          "step": 2,
-          "text": "Flip, add cheese."
-        },
-        {
-          "step": 3,
-          "text": "Assemble on toasted buns."
-        }
+        "Smash beef balls onto hot griddle.",
+        "Flip, add cheese.",
+        "Assemble on toasted buns."
       ]
     },
     {
@@ -310,7 +301,7 @@
       "cook_time": "40 min",
       "servings": 4,
       "difficulty": "Medium",
-      "image": "https://via.placeholder.com/600x400?text=Tikka+Masala",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581079/68285d522788922f3fed6b4d8d185084_eguiau.jpg",
       "ingredients": [
         "Chicken",
         "Yogurt",
@@ -319,18 +310,9 @@
         "Cream"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Marinate and grill chicken."
-        },
-        {
-          "step": 2,
-          "text": "Simmer spiced tomato sauce."
-        },
-        {
-          "step": 3,
-          "text": "Add cream and chicken."
-        }
+        "Marinate and grill chicken.",
+        "Simmer spiced tomato sauce.",
+        "Add cream and chicken."
       ]
     },
     {
@@ -342,7 +324,7 @@
       "cook_time": "20 min",
       "servings": "4",
       "difficulty": "Easy",
-      "image": "https://via.placeholder.com/600x400?text=Shakshuka",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581110/28aab2440fe80f51921d630a825571dc_iuzco1.jpg",
       "ingredients": [
         "Eggs",
         "Tomatoes",
@@ -351,20 +333,34 @@
         "Cumin"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Sauté veggies and spices."
-        },
-        {
-          "step": 2,
-          "text": "Add tomatoes and simmer."
-        },
-        {
-          "step": 3,
-          "text": "Crack eggs into sauce and cover."
-        }
+        "Sauté veggies and spices.",
+        "Add tomatoes and simmer.",
+        "Crack eggs into sauce and cover."
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Beef Tacos",
+      "category_id": "3",
+      "country": "Mexique",
+      "description": "Mexican street-style tacos with seasoned ground beef.",
+      "prep_time": "15 min",
+      "cook_time": "15 min",
+      "servings": 4,
+      "difficulty": "Easy",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581147/3241880813fac1480cabf86d28fbdc48_mlfoo1.jpg",
+      "ingredients": [
+        "Corn tortillas",
+        "Ground beef",
+        "Lime",
+        "Cilantro",
+        "Onion"
       ],
-      "id": "15"
+      "instructions": [
+        "Brown beef with seasoning.",
+        "Warm tortillas.",
+        "Assemble with fresh toppings."
+      ]
     },
     {
       "id": "17",
@@ -376,7 +372,7 @@
       "cook_time": "180 min",
       "servings": 2,
       "difficulty": "Hard",
-      "image": "https://via.placeholder.com/600x400?text=Ramen",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581179/d26ca7c688128542ebc5e9d491db1b6e_kj3his.jpg",
       "ingredients": [
         "Ramen noodles",
         "Stock",
@@ -385,18 +381,58 @@
         "Nori"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Simmer broth."
-        },
-        {
-          "step": 2,
-          "text": "Cook noodles."
-        },
-        {
-          "step": 3,
-          "text": "Assemble bowl with toppings."
-        }
+        "Simmer broth.",
+        "Cook noodles.",
+        "Assemble bowl with toppings."
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Acai Bowl",
+      "category_id": "5",
+      "country": "Bresil",
+      "description": "A thick smoothie bowl loaded with toppings.",
+      "prep_time": "10 min",
+      "cook_time": "0 min",
+      "servings": 1,
+      "difficulty": "Easy",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581215/61d0525e6197ac32cc724c651463418c_dhsihu.jpg",
+      "ingredients": [
+        "Acai pack",
+        "Banana",
+        "Granola",
+        "Berries",
+        "Honey"
+      ],
+      "instructions": [
+        "Blend acai and banana.",
+        "Pour into bowl.",
+        "Add toppings."
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Fudgy Brownies",
+      "category_id": "6",
+      "country": "USA",
+      "description": "Rich, chocolatey squares with a crinkly top.",
+      "prep_time": "15 min",
+      "cook_time": "30 min",
+      "servings": 9,
+      "difficulty": "Medium",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581248/fd9ec12ea9c0287f551537da3dc75605_jeuxpm.jpg",
+      "ingredients": [
+        "Dark chocolate",
+        "Butter",
+        "Sugar",
+        "Eggs",
+        "Cocoa",
+        "Flour"
+      ],
+      "instructions": [
+        "Melt butter and chocolate.",
+        "Whisk sugar/eggs, fold dry ingredients.",
+        "Bake at 180°C for 25 mins."
       ]
     },
     {
@@ -409,7 +445,7 @@
       "cook_time": "60 min",
       "servings": 12,
       "difficulty": "Hard",
-      "image": "https://via.placeholder.com/600x400?text=Cheesecake",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581277/dea01a87b4e0389b06ea43a19e6af30c_j21h6j.jpg",
       "ingredients": [
         "Cream cheese",
         "Sugar",
@@ -418,18 +454,9 @@
         "Biscuits"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Press biscuit base into pan."
-        },
-        {
-          "step": 2,
-          "text": "Beat filling ingredients."
-        },
-        {
-          "step": 3,
-          "text": "Bake in water bath."
-        }
+        "Press biscuit base into pan.",
+        "Beat filling ingredients.",
+        "Bake in water bath."
       ]
     },
     {
@@ -442,7 +469,7 @@
       "cook_time": "30 min",
       "servings": 8,
       "difficulty": "Medium",
-      "image": "https://via.placeholder.com/600x400?text=Lemon+Tart",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581304/261026b6b2cfa878dad54b25d2ce9324_icpirj.jpg",
       "ingredients": [
         "Pastry flour",
         "Butter",
@@ -451,18 +478,9 @@
         "Sugar"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Bake pastry shell."
-        },
-        {
-          "step": 2,
-          "text": "Cook lemon curd."
-        },
-        {
-          "step": 3,
-          "text": "Fill shell and chill."
-        }
+        "Bake pastry shell.",
+        "Cook lemon curd.",
+        "Fill shell and chill."
       ]
     },
     {
@@ -475,7 +493,7 @@
       "cook_time": "15 min",
       "servings": 4,
       "difficulty": "Medium",
-      "image": "https://via.placeholder.com/600x400?text=Falafel",
+      "image": "https://i.pinimg.com/736x/a5/37/54/a5375465810cb96c373e44c9df281122.jpg",
       "ingredients": [
         "Chickpeas",
         "Parsley",
@@ -484,18 +502,9 @@
         "Flatbread"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Blend chickpeas and herbs."
-        },
-        {
-          "step": 2,
-          "text": "Form balls and fry."
-        },
-        {
-          "step": 3,
-          "text": "Wrap with tahini and salad."
-        }
+        "Blend chickpeas and herbs.",
+        "Form balls and fry.",
+        "Wrap with tahini and salad."
       ]
     },
     {
@@ -508,7 +517,7 @@
       "cook_time": "10 min",
       "servings": 2,
       "difficulty": "Medium",
-      "image": "https://via.placeholder.com/600x400?text=Pad+Thai",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581366/2a5e8a907d7251e615def015b7ae8e6b_utfleo.jpg",
       "ingredients": [
         "Rice noodles",
         "Shrimp",
@@ -517,18 +526,9 @@
         "Tamarind"
       ],
       "instructions": [
-        {
-          "step": 1,
-          "text": "Soak noodles."
-        },
-        {
-          "step": 2,
-          "text": "Stir fry shrimp and tofu."
-        },
-        {
-          "step": 3,
-          "text": "Add noodles, sauce, egg, and peanuts."
-        }
+        "Soak noodles.",
+        "Stir fry shrimp and tofu.",
+        "Add noodles, sauce, egg, and peanuts."
       ]
     }
   ]

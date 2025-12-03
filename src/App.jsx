@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Add from './pages/add'
+import Add from '../pages/Admin/AddRecipe.jsx'
 import { BrowserRouter ,Routes, Route , } from 'react-router-dom'
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -24,11 +24,6 @@ function App() {
   });
 
   return (
-    <>
-   
-      <Add />
-    </>
-  )
     <BrowserRouter>
       <Navbar />
        <Toaster richColors position='top-right' />
@@ -38,7 +33,7 @@ function App() {
         <Route path="/recipes" element={<Recipes/>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/test" element={<Test />} />
-          
+        <Route path="/admin/add-recipe" element={<Add />} />
       </Routes>
     </BrowserRouter>
   );

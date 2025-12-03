@@ -12,6 +12,9 @@ export default function Navbar() {
           <Link to="/">Home</Link>
           <Link to="/recipes">Recipes</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/Add">Add</Link>
+          <Link to="/Manage">Manage</Link>
+          
         </div>
       </nav>
   )

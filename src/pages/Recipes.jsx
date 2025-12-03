@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "../components/Card";
 import "./Recipes.css";
-
+import food from "../data/app.json"
 export default function Recipes() {
   const [recipe, setRecipe] = useState([]);
   const [filtre, setFiltre] = useState("");
@@ -10,7 +10,7 @@ export default function Recipes() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/recipes")
+      .get("http://localhost:5000/recipes")
       .then(res => setRecipe(res.data))
       .catch(error => console.log("Erreur :", error));
   }, []);

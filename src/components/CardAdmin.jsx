@@ -80,7 +80,7 @@ const uploadImageToCloudinary = async (file) => {
     const [instructions,setInstructions] = useState(props.instructions)
 
    const Delete = (id) => {
-    axios.delete(`http://localhost:3000/recipes/${id}`)
+    axios.delete(`http://localhost:5000/recipes/${id}`)
       .then((res) => {
         console.log("deleted", res)
       })
@@ -92,7 +92,7 @@ const uploadImageToCloudinary = async (file) => {
    }
 
    const Edit = (id) =>{
-    axios.put(`http://localhost:3000/recipes/${id}`,{
+    axios.put(`http://localhost:5000/recipes/${id}`,{
       title : title,
      category_id : category_id,
      country : country,

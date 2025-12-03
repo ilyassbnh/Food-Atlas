@@ -78,7 +78,6 @@ export default function Add() {
   }
 
   return (
-    <div className="divFrom">
     <form className="formule" onSubmit={handleSubmit}>
       <h2>Ajouter une recette</h2>
 
@@ -127,6 +126,5 @@ export default function Add() {
 
       <button className="Btn" type="submit">Ajouter</button>
     </form>
-    </div>
   );
 }

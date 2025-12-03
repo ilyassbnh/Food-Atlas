@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "../components/Card";
 import "./Recipes.css";
-
+import food from "../data/app.json"
 export default function Recipes() {
   const [recipe, setRecipe] = useState([]);
   const [filtre, setFiltre] = useState("");
@@ -70,6 +70,7 @@ export default function Recipes() {
         .map(item => (
           <Card
             key={item.id}
+            id={item.id}
             image={item.image}
             title={item.title}
             country={item.country}

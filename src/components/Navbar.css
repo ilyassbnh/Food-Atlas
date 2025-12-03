@@ -11,13 +11,7 @@
   top: 0;
   z-index: 1000;
 }
-.logo{
-  width: 60px;
-  height: 60px;
-  margin-left: 0px;
-}
-
-.nav-logo {
+/*.nav-logo {
   background-color: #ff5722; 
   color: white;              
   font-size: 1.5rem;
@@ -28,18 +22,23 @@
   border-radius: 25px;
   cursor: pointer; 
   transition: transform 0.3s ease;
+}*/
+.logo{
+  width: 60px;
+  height: 60px;
+  margin-left: 0px;
 }
 
-.nav-logo:hover {
+/*.nav-logo:hover {
   background-color: #7f4635; 
-}
+}*/
 .nav-links {
   display: flex;
   gap: 30px;
 }
 
 .nav-links a {
-  color: #ecf0f1;
+  color: #ad726a;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;

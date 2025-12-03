@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import Test from './components/Test';
 import Recipes from './pages/Recipes';
 import ManageRecipes from './pages/Admin/ManageRecipes'
+import MainLayout from './components/MainLayout';
 import './App.css';
 import { Toaster } from 'sonner';
 
@@ -24,17 +25,18 @@ function App() {
   return (
      
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
       <Toaster richColors position='top-right' />
       <Routes>
         
-        <Route path="/" element={<Home />} />
-        <Route path="/recipes/:id" element={<RecipeDetails />} />
-        <Route path="/recipes" element={<Recipes/>} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/" element={<MainLayout><Home /></MainLayout>} />
+        <Route path="/recipes/:id" element={ <MainLayout><RecipeDetails /></MainLayout>} />
+        <Route path="/recipes" element={ <MainLayout><Recipes/></MainLayout>} />
+        <Route path="/contact" element={ <MainLayout><Contact /></MainLayout>} />
+        <Route path="/test" element={ <MainLayout><Test /></MainLayout>} />
         <Route path="/manage" element={<ManageRecipes />} />
         <Route path="/admin/add-recipe" element={<Add />} />
+        <Route path="/manage" element={<ManageRecipes  />} />
       </Routes>
     </BrowserRouter>
   );

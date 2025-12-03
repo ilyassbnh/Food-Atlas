@@ -1,49 +1,130 @@
-import React from 'react'
-import { useState } from 'react'
-import './add.css'
-import axios from 'axios'
+import React, { useState } from "react";
+import "../pages/add.css";
+import axios from "axios";
+
+
 export default function Add() {
-    const [input, setInput] = useState({name:"", category:"", image:"", ingredients:"", description:"", steps:""})
-    function handleChange(e){
-        const {name, value} = e.target
-        if(name==="image"){
-            setInput({...input, [name]: e.target.files[0]})
-        } else {
-            setInput({ ...input, [name]: value})
-        }
+  const [input, setInput] = useState({
+    name: "",
+    category: "",
+    image: "",
+    ingredients: "",
+    description: "",
+    steps: "",
+  });
+
+  const [loadingImg, setLoadingImg] = useState(false);
+
+  // 🔹 Changer les inputs
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setInput({ ...input, [name]: value });
+  }
+
+  // 🔹 Upload Cloudinary avec axios
+  async function handleImageUpload(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    setLoadingImg(true);
+
+    const data = new FormData();
+    data.append("file", file);
+    data.append("upload_preset", "unsigned_preset");
+
+    try {
+      const res = await axios.post(
+        "https://api.cloudinary.com/v1_1/dtpjdj7m4/image/upload",
+        data
+      );
+
+      setInput(prev => ({
+  ...prev,
+  image: res.data.secure_url
+}));
+    } catch (error) {
+      console.error("Erreur upload image :", error);
     }
-    function handsubmit(){
-        axios.post("http://localhost:3000/recipes",input)
-        .then((res) =>{
-            console.log(res)
-        })
-        .catch((err) =>{
-            console.log(err)
-        })
+
+    setLoadingImg(false);
+  }
+
+  // 🔹 POST vers JSON Server + vider formulaire
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    const newRecette = {
+      ...input,
+      ingredients: input.ingredients.split(",").map(i => i.trim()),
+      steps: input.steps.split(",").map(s => s.trim()),
+    };
+
+    try {
+      await axios.post("http://localhost:3000/recipes", newRecette);
+      alert("Recette enregistrée !");
+    } catch (error) {
+      console.error("Erreur POST :", error);
     }
+
+    // vider formulaire
+    setInput({
+      name: "",
+      category: "",
+      image: "",
+      ingredients: "",
+      description: "",
+      steps: "",
+    });
+  }
 
   return (
-    <div>
-       <form className='formule'>
-        
-            <label>name</label>
-                <input type="text"   name="name" value={input.name} onChange={handleChange}    />
-            
-            <label>Country / category:</label>
-                <input type="text"   name="category" value={input.category} onChange={handleChange}  />
-            <label>ingredients: </label>
-                <input type="text" name='ingredients' value={input.ingredients} onChange={handleChange} />
-           
-            <label>Description:</label>
-                <input type="text" name='description' value={input.description} onChange={handleChange} />
-            
-            <label>Steps: </label>
-                <input type="text" name='steps' value={input.steps} onChange={handleChange} />
-            <label>Image:</label>
-                <input type="file"  name='image' onChange={handleChange}/>
-            <button  className="Btn" type="submit"  onClick={handsubmit}>Add</button>
-       </form>
-    </div>
-  )
-}
+    <form className="formule" onSubmit={handleSubmit}>
+      <h2>Ajouter une recette</h2>
 
+      <input
+        type="text"
+        name="name"
+        placeholder="Nom"
+        value={input.name}
+        onChange={handleChange}
+      />
+
+      <input
+        type="text"
+        name="category"
+        placeholder="Catégorie"
+        value={input.category}
+        onChange={handleChange}
+      />
+
+      {/* Upload Cloudinary */}
+      <input type="file" accept="image/*" onChange={handleImageUpload} />
+
+      {loadingImg && <p>Uploading...</p>}
+      {input.image && <img src={input.image} width="150" alt="preview" />}
+
+      <textarea
+        name="description"
+        placeholder="Description"
+        value={input.description}
+        onChange={handleChange}
+      ></textarea>
+
+      <textarea
+        name="ingredients"
+        placeholder="Ingrédients (séparés par virgules)"
+        value={input.ingredients}
+        onChange={handleChange}
+      ></textarea>
+
+      <textarea
+        name="steps"
+        placeholder="Étapes (séparées par virgules)"
+        value={input.steps}
+        onChange={handleChange}
+      ></textarea>
+
+      <button className="Btn" type="submit">Ajouter</button>
+    </form>
+  );
+}

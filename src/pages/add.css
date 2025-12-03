@@ -26,6 +26,15 @@
     padding: 10px;
     margin-left: 50px;
 }
+.formule textarea {
+    width: 600px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 50px;
+}
+
 body{
     margin: 10px;
     padding: 10px;

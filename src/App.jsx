@@ -21,16 +21,18 @@ function App() {
   });
 
   return (
+     
     <BrowserRouter>
       <Navbar />
-       <Toaster richColors position='top-right' />
+      <Toaster richColors position='top-right' />
       <Routes>
+        
         <Route path="/" element={<Home />} />
         <Route path="/recipes/:id" element={<RecipeDetails />} />
         <Route path="/recipes" element={<Recipes/>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/test" element={<Test />} />
-          
+        <Route path="/manage" element={<ManageRecipes />} />
       </Routes>
     </BrowserRouter>
   );

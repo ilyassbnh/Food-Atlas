@@ -3,6 +3,7 @@ import food from '../../data/app.json'
 import Card from '../../components/Card';
 import './ManageRecipes.css'
 import { RiHomeLine } from "react-icons/ri"
+import CardAdmin from '../../components/CardAdmin';
 const ManageRecipes = () => {
 
   const [search,setSearch] = useState("")
@@ -35,7 +36,7 @@ const ManageRecipes = () => {
             
             .map((index) => {
               return(
-                <Card title={index.title}
+                <CardAdmin title={index.title}
                  country={index.country}
                   id={index.id}
                    style={{ animationDelay: `${index * 150}ms` }}

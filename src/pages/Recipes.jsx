@@ -10,7 +10,7 @@ export default function Recipes() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/recipes")
+      .get("http://localhost:5000/recipes")
       .then(res => setRecipe(res.data))
       .catch(error => console.log("Erreur :", error));
   }, []);

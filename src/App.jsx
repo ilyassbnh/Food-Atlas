@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import Add from '../pages/Admin/AddRecipe.jsx'
+import Add from './pages/Admin/AddRecipe.jsx'
 import { BrowserRouter ,Routes, Route , } from 'react-router-dom'
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+ 
 import { Cloudinary } from '@cloudinary/url-gen';
 import { auto } from '@cloudinary/url-gen/actions/resize';
 import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
@@ -34,6 +34,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/test" element={<Test />} />
         <Route path="/admin/add-recipe" element={<Add />} />
+        <Route path="/manage" element={<ManageRecipes  />} />
       </Routes>
     </BrowserRouter>
   );

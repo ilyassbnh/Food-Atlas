@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // 1. Import useNavigate
+import { useNavigate } from "react-router-dom"; 
 import "./Home.css";
 import jsonFile from '../data/app.json'; 
 

@@ -12,7 +12,6 @@ const RecipeDetails = () => {
     const fetchRecipe = async () => {
       try {
         setLoading(true);
-        // ⚠️ Make sure this port matches your JSON Server (5000)
         const response = await axios.get(`http://localhost:5000/recipes/${id}`);
         setRecipe(response.data);
         setError(null);

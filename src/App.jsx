@@ -12,8 +12,6 @@ import RecipeDetails from './pages/RecipeDetails';
 import Contact from './pages/Contact';
 import Test from './components/Test';
 import Recipes from './pages/Recipes';
-import Add from './pages/add';
-
 import ManageRecipes from './pages/Admin/ManageRecipes'
 import MainLayout from './components/MainLayout';
 import './App.css';
@@ -39,7 +37,7 @@ function App() {
         <Route path="/manage" element={<ManageRecipes  />} />
       </Routes>
     </BrowserRouter>
-  );
+  
 }
 
 export default App;

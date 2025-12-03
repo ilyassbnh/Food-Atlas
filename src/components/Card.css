@@ -1,21 +1,39 @@
-.box{
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    
+.cardRecipe {
+  width: 260px;
+  padding: 19px;
+  border-radius: 50px;
+  background: #EEE6D8;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-.txt{
-    font-size: smaller;
+.cardRecipe:hover {
+  transform: scale(1.05);
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.10);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+.cardRecipe-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
+.cardRecipe-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
 
+.cardRecipe-country {
+  font-size: 15px;
+  color: #430C05;
+  margin-top: 5px;
+}
+.btn{
+  background-color: #a56e67;
+  border-radius: 20px;
+  padding: 8px;
+  width: 90px;
+}

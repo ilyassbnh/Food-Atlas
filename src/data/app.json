@@ -35,9 +35,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580048/Recette_de_tajine_de_poulet_%C3%A0_la_marocaine___Recette_imprimable_traditionnelle_et_facile_wuhojm.jpg",
       "ingredients": ["1 whole chicken", "2 onions", "Garlic", "Ginger", "Turmeric", "Preserved lemon", "Green olives"],
       "instructions": [
-        { "step": 1, "text": "Marinate chicken with spices and garlic." },
-        { "step": 2, "text": "Sauté onions, add chicken, and simmer." },
-        { "step": 3, "text": "Add olives and lemon near the end." }
+        "Marinate chicken with spices and garlic.",
+        "Sauté onions, add chicken, and simmer.",
+        "Add olives and lemon near the end."
       ]
     },
     {
@@ -53,9 +53,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580165/6caeea8b86a626b4678488234d00a6e7_swkshi.jpg",
       "ingredients": ["1 cup quinoa", "2 avocados", "Cucumber", "Cherry tomatoes", "Lemon dressing"],
       "instructions": [
-        { "step": 1, "text": "Cook quinoa and let cool." },
-        { "step": 2, "text": "Chop vegetables." },
-        { "step": 3, "text": "Toss everything with dressing." }
+        "Cook quinoa and let cool.",
+        "Chop vegetables.",
+        "Toss everything with dressing."
       ]
     },
     {
@@ -71,9 +71,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580202/1751a1eee320a9562d982c760246b1fa_bsthgk.jpg",
       "ingredients": ["100g dark chocolate", "100g butter", "2 eggs", "Sugar", "Flour"],
       "instructions": [
-        { "step": 1, "text": "Melt chocolate and butter." },
-        { "step": 2, "text": "Whisk eggs/sugar, fold in chocolate and flour." },
-        { "step": 3, "text": "Bake at 200°C for 12 minutes." }
+        "Melt chocolate and butter.",
+        "Whisk eggs/sugar, fold in chocolate and flour.",
+        "Bake at 200°C for 12 minutes."
       ]
     },
     {
@@ -89,9 +89,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580245/ea228ce9cd9e0d2ed76054b778a67633_drvsot.jpg",
       "ingredients": ["1kg beef shank", "200g prunes", "Onions", "Cinnamon", "Honey", "Almonds"],
       "instructions": [
-        { "step": 1, "text": "Sear beef with onions." },
-        { "step": 2, "text": "Simmer with spices for 1.5 hours." },
-        { "step": 3, "text": "Caramelize prunes and top the beef." }
+        "Sear beef with onions.",
+        "Simmer with spices for 1.5 hours.",
+        "Caramelize prunes and top the beef."
       ]
     },
     {
@@ -107,9 +107,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580303/6c7249633135c18f8cd38a9bc0fe33d0_rrettz.jpg",
       "ingredients": ["Couscous", "Lamb/Chicken", "Carrots", "Zucchini", "Turnips", "Pumpkin", "Chickpeas"],
       "instructions": [
-        { "step": 1, "text": "Steam couscous grains 3 times." },
-        { "step": 2, "text": "Cook meat and hard veggies in broth." },
-        { "step": 3, "text": "Add soft veggies later and serve." }
+        "Steam couscous grains 3 times.",
+        "Cook meat and hard veggies in broth.",
+        "Add soft veggies later and serve."
       ]
     },
     {
@@ -125,9 +125,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580688/6c1aeabccbaae35006bd1eb8ea4b9ffb_xftqee.jpg",
       "ingredients": ["Tomatoes", "Lentils", "Chickpeas", "Celery", "Parsley", "Vermicelli"],
       "instructions": [
-        { "step": 1, "text": "Sauté herbs and onions." },
-        { "step": 2, "text": "Simmer with tomatoes and lentils." },
-        { "step": 3, "text": "Thicken and add vermicelli." }
+        "Sauté herbs and onions.",
+        "Simmer with tomatoes and lentils.",
+        "Thicken and add vermicelli."
       ]
     },
     {
@@ -143,9 +143,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580738/f05bae9f08a2936b900db7d5698e1a89_kbzqxe.jpg",
       "ingredients": ["Warqa dough", "Chicken", "Almonds", "Sugar", "Cinnamon", "Eggs"],
       "instructions": [
-        { "step": 1, "text": "Cook and shred chicken." },
-        { "step": 2, "text": "Cook eggs in onion sauce." },
-        { "step": 3, "text": "Layer dough, fillings, and bake." }
+        "Cook and shred chicken.",
+        "Cook eggs in onion sauce.",
+        "Layer dough, fillings, and bake."
       ]
     },
     {
@@ -161,9 +161,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580773/7fcf19bb3d3c7d65cdfe278d89586faf_fg6zvw.jpg",
       "ingredients": ["Eggplants", "Tomatoes", "Garlic", "Cumin", "Paprika"],
       "instructions": [
-        { "step": 1, "text": "Roast eggplants." },
-        { "step": 2, "text": "Sauté tomatoes and spices." },
-        { "step": 3, "text": "Mash eggplant into mixture and cook down." }
+        "Roast eggplants.",
+        "Sauté tomatoes and spices.",
+        "Mash eggplant into mixture and cook down."
       ]
     },
     {
@@ -179,9 +179,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580817/03cc88306036dfae8423c5c1762dc15a_p8rutz.jpg",
       "ingredients": ["Salmon fillet", "Brown rice", "Avocado", "Edamame", "Soy sauce"],
       "instructions": [
-        { "step": 1, "text": "Cook brown rice." },
-        { "step": 2, "text": "Grill salmon." },
-        { "step": 3, "text": "Assemble bowl with veggies." }
+        "Cook brown rice.",
+        "Grill salmon.",
+        "Assemble bowl with veggies."
       ]
     },
     {
@@ -197,9 +197,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580860/f9bea17b6ace81729c5183fe4793c44b_trawcf.jpg",
       "ingredients": ["Romaine lettuce", "Parmesan", "Croutons", "Caesar dressing"],
       "instructions": [
-        { "step": 1, "text": "Chop lettuce." },
-        { "step": 2, "text": "Toss with dressing." },
-        { "step": 3, "text": "Top with cheese and croutons." }
+        "Chop lettuce.",
+        "Toss with dressing.",
+        "Top with cheese and croutons."
       ]
     },
     {
@@ -215,9 +215,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580962/48285145054a6d747befd1a2a6700924_ghf6i1.jpg",
       "ingredients": ["Spaghetti", "Guanciale/Bacon", "Pecorino", "Eggs", "Pepper"],
       "instructions": [
-        { "step": 1, "text": "Boil pasta and fry bacon." },
-        { "step": 2, "text": "Whisk eggs and cheese." },
-        { "step": 3, "text": "Toss hot pasta with egg mix off heat." }
+        "Boil pasta and fry bacon.",
+        "Whisk eggs and cheese.",
+        "Toss hot pasta with egg mix off heat."
       ]
     },
     {
@@ -233,9 +233,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580997/57e7a19334571946391a7430fcb86202_mhqrz5.jpg",
       "ingredients": ["Dough", "San Marzano tomatoes", "Mozzarella", "Basil"],
       "instructions": [
-        { "step": 1, "text": "Stretch dough." },
-        { "step": 2, "text": "Add sauce and cheese." },
-        { "step": 3, "text": "Bake at max heat." }
+        "Stretch dough.",
+        "Add sauce and cheese.",
+        "Bake at max heat."
       ]
     },
     {
@@ -251,9 +251,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581048/939af88de8b75ea4c6488c7a7c6419f8_z3ghog.jpg",
       "ingredients": ["Ground beef", "American cheese", "Brioche buns", "Pickles"],
       "instructions": [
-        { "step": 1, "text": "Smash beef balls onto hot griddle." },
-        { "step": 2, "text": "Flip, add cheese." },
-        { "step": 3, "text": "Assemble on toasted buns." }
+        "Smash beef balls onto hot griddle.",
+        "Flip, add cheese.",
+        "Assemble on toasted buns."
       ]
     },
     {
@@ -269,9 +269,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581079/68285d522788922f3fed6b4d8d185084_eguiau.jpg",
       "ingredients": ["Chicken", "Yogurt", "Garam Masala", "Tomato puree", "Cream"],
       "instructions": [
-        { "step": 1, "text": "Marinate and grill chicken." },
-        { "step": 2, "text": "Simmer spiced tomato sauce." },
-        { "step": 3, "text": "Add cream and chicken." }
+        "Marinate and grill chicken.",
+        "Simmer spiced tomato sauce.",
+        "Add cream and chicken."
       ]
     },
     {
@@ -287,9 +287,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581110/28aab2440fe80f51921d630a825571dc_iuzco1.jpg",
       "ingredients": ["Eggs", "Tomatoes", "Peppers", "Onion", "Cumin"],
       "instructions": [
-        { "step": 1, "text": "Sauté veggies and spices." },
-        { "step": 2, "text": "Add tomatoes and simmer." },
-        { "step": 3, "text": "Crack eggs into sauce and cover." }
+        "Sauté veggies and spices.",
+        "Add tomatoes and simmer.",
+        "Crack eggs into sauce and cover."
       ]
     },
     {
@@ -305,9 +305,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581147/3241880813fac1480cabf86d28fbdc48_mlfoo1.jpg",
       "ingredients": ["Corn tortillas", "Ground beef", "Lime", "Cilantro", "Onion"],
       "instructions": [
-        { "step": 1, "text": "Brown beef with seasoning." },
-        { "step": 2, "text": "Warm tortillas." },
-        { "step": 3, "text": "Assemble with fresh toppings." }
+        "Brown beef with seasoning.",
+        "Warm tortillas.",
+        "Assemble with fresh toppings."
       ]
     },
     {
@@ -323,9 +323,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581179/d26ca7c688128542ebc5e9d491db1b6e_kj3his.jpg",
       "ingredients": ["Ramen noodles", "Stock", "Soy sauce", "Egg", "Nori"],
       "instructions": [
-        { "step": 1, "text": "Simmer broth." },
-        { "step": 2, "text": "Cook noodles." },
-        { "step": 3, "text": "Assemble bowl with toppings." }
+        "Simmer broth.",
+        "Cook noodles.",
+        "Assemble bowl with toppings."
       ]
     },
     {
@@ -341,9 +341,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581215/61d0525e6197ac32cc724c651463418c_dhsihu.jpg",
       "ingredients": ["Acai pack", "Banana", "Granola", "Berries", "Honey"],
       "instructions": [
-        { "step": 1, "text": "Blend acai and banana." },
-        { "step": 2, "text": "Pour into bowl." },
-        { "step": 3, "text": "Add toppings." }
+        "Blend acai and banana.",
+        "Pour into bowl.",
+        "Add toppings."
       ]
     },
     {
@@ -359,9 +359,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581248/fd9ec12ea9c0287f551537da3dc75605_jeuxpm.jpg",
       "ingredients": ["Dark chocolate", "Butter", "Sugar", "Eggs", "Cocoa", "Flour"],
       "instructions": [
-        { "step": 1, "text": "Melt butter and chocolate." },
-        { "step": 2, "text": "Whisk sugar/eggs, fold dry ingredients." },
-        { "step": 3, "text": "Bake at 180°C for 25 mins." }
+        "Melt butter and chocolate.",
+        "Whisk sugar/eggs, fold dry ingredients.",
+        "Bake at 180°C for 25 mins."
       ]
     },
     {
@@ -377,9 +377,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581277/dea01a87b4e0389b06ea43a19e6af30c_j21h6j.jpg",
       "ingredients": ["Cream cheese", "Sugar", "Eggs", "Vanilla", "Biscuits"],
       "instructions": [
-        { "step": 1, "text": "Press biscuit base into pan." },
-        { "step": 2, "text": "Beat filling ingredients." },
-        { "step": 3, "text": "Bake in water bath." }
+        "Press biscuit base into pan.",
+        "Beat filling ingredients.",
+        "Bake in water bath."
       ]
     },
     {
@@ -395,9 +395,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581304/261026b6b2cfa878dad54b25d2ce9324_icpirj.jpg",
       "ingredients": ["Pastry flour", "Butter", "Lemons", "Eggs", "Sugar"],
       "instructions": [
-        { "step": 1, "text": "Bake pastry shell." },
-        { "step": 2, "text": "Cook lemon curd." },
-        { "step": 3, "text": "Fill shell and chill." }
+        "Bake pastry shell.",
+        "Cook lemon curd.",
+        "Fill shell and chill."
       ]
     },
     {
@@ -413,9 +413,9 @@
       "image": "https://i.pinimg.com/736x/a5/37/54/a5375465810cb96c373e44c9df281122.jpg",
       "ingredients": ["Chickpeas", "Parsley", "Garlic", "Cumin", "Flatbread"],
       "instructions": [
-        { "step": 1, "text": "Blend chickpeas and herbs." },
-        { "step": 2, "text": "Form balls and fry." },
-        { "step": 3, "text": "Wrap with tahini and salad." }
+        "Blend chickpeas and herbs.",
+        "Form balls and fry.",
+        "Wrap with tahini and salad."
       ]
     },
     {
@@ -431,9 +431,9 @@
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581366/2a5e8a907d7251e615def015b7ae8e6b_utfleo.jpg",
       "ingredients": ["Rice noodles", "Shrimp", "Tofu", "Peanuts", "Tamarind"],
       "instructions": [
-        { "step": 1, "text": "Soak noodles." },
-        { "step": 2, "text": "Stir fry shrimp and tofu." },
-        { "step": 3, "text": "Add noodles, sauce, egg, and peanuts." }
+        "Soak noodles.",
+        "Stir fry shrimp and tofu.",
+        "Add noodles, sauce, egg, and peanuts."
       ]
     }
   ]

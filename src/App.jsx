@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import Add from '../pages/Admin/AddRecipe.jsx'
+import { BrowserRouter ,Routes, Route , } from 'react-router-dom'
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Cloudinary } from '@cloudinary/url-gen';
@@ -33,6 +36,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/test" element={<Test />} />
         <Route path="/manage" element={<ManageRecipes />} />
+        <Route path="/admin/add-recipe" element={<Add />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,22 @@
+
+{
+  "data" : [
+    {
+      "Name": "ITALY",
+      "description": "We show some of the most popular Italian foods like pizza."
+    },
+    {
+      "Name": "MOROCCO",
+      "description": "Moroccan cooking is an art form centered around sharing. It is acuisine defined by patience and love, where meals like Pastilla andHarira bring families together around a shared table."
+    },
+    {
+      "Name": "L'ASIE",
+      "description": " Experience the fresh, bold, and diverse flavors of Asia. Whether you  crave a steaming bowl of Ramen, crispy Dumplings, or a savory PadThai, this kitchen offers an endless adventure for your taste buds."
+    },
+    {
+      "Name": "LATINE <AMERICA",
+      "description": " Get ready for a fiesta of flavors! Latin American cuisine is known for its vibrant colors and bold tastes. From the spicy kick of Mexican Tacos to the savory crunch of Argentine Empanadas, enjoy aculinary journey full of passion and spice."
+    }
+
+  ]
+}

@@ -23,68 +23,43 @@
   ],
   "recipes": [
     {
-      "id": "1",
       "title": "Traditional Chicken Tagine",
       "category_id": "1",
-      "country": "Maroc",
+      "country": "Morroco",
       "description": "A classic Moroccan dish slow-cooked with preserved lemons and olives.",
       "prep_time": "20 min",
       "cook_time": "60 min",
       "servings": 4,
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580048/Recette_de_tajine_de_poulet_%C3%A0_la_marocaine___Recette_imprimable_traditionnelle_et_facile_wuhojm.jpg",
-      "ingredients": ["1 whole chicken", "2 onions", "Garlic", "Ginger", "Turmeric", "Preserved lemon", "Green olives"],
+      "ingredients": [
+        "1 whole chicken",
+        "2 onions",
+        "Garlic",
+        "Ginger",
+        "Turmeric",
+        "Preserved lemon",
+        "Green olives",
+        "aaaaaaaaaaa"
+      ],
       "instructions": [
         "Marinate chicken with spices and garlic.",
-        "Sauté onions, add chicken, and simmer.",
-        "Add olives and lemon near the end."
-      ]
+        "Sauté onions",
+        "add chicken",
+        "and simmer.",
+        "Add olives and lemon near the end.",
+        "aaaaaaaaaaaaaaaaaaaa"
+      ],
+      "id": "1"
     },
     {
-      "id": "2",
-      "title": "Avocado & Quinoa Salad",
-      "category_id": "5",
-      "country": "International",
-      "description": "A refreshing, nutrient-packed salad perfect for a light lunch.",
-      "prep_time": "15 min",
-      "cook_time": "15 min",
-      "servings": 2,
-      "difficulty": "Easy",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580165/6caeea8b86a626b4678488234d00a6e7_swkshi.jpg",
-      "ingredients": ["1 cup quinoa", "2 avocados", "Cucumber", "Cherry tomatoes", "Lemon dressing"],
-      "instructions": [
-        "Cook quinoa and let cool.",
-        "Chop vegetables.",
-        "Toss everything with dressing."
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Chocolate Lava Cake",
-      "category_id": "6",
-      "country": "France",
-      "description": "Decadent individual cakes with a molten chocolate center.",
-      "prep_time": "15 min",
-      "cook_time": "12 min",
-      "servings": 2,
-      "difficulty": "Hard",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580202/1751a1eee320a9562d982c760246b1fa_bsthgk.jpg",
-      "ingredients": ["100g dark chocolate", "100g butter", "2 eggs", "Sugar", "Flour"],
-      "instructions": [
-        "Melt chocolate and butter.",
-        "Whisk eggs/sugar, fold in chocolate and flour.",
-        "Bake at 200°C for 12 minutes."
-      ]
-    },
-    {
-      "id": "4",
       "title": "Beef Tagine with Prunes",
       "category_id": "1",
-      "country": "Maroc",
+      "country": "Morroco",
       "description": "A sweet and savory Moroccan classic featuring tender beef and caramelized prunes.",
       "prep_time": "20 min",
       "cook_time": "120 min",
-      "servings": 4,
+      "servings": "5",
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580245/ea228ce9cd9e0d2ed76054b778a67633_drvsot.jpg",
       "ingredients": ["1kg beef shank", "200g prunes", "Onions", "Cinnamon", "Honey", "Almonds"],
@@ -95,10 +70,9 @@
       ]
     },
     {
-      "id": "5",
       "title": "Seven Vegetable Couscous",
       "category_id": "1",
-      "country": "Maroc",
+      "country": "Morocco",
       "description": "The traditional Friday dish. Fluffy semolina grains steamed over a rich vegetable broth.",
       "prep_time": "45 min",
       "cook_time": "60 min",
@@ -113,14 +87,13 @@
       ]
     },
     {
-      "id": "6",
       "title": "Harira Soup",
       "category_id": "1",
-      "country": "Maroc",
+      "country": "Morroco",
       "description": "A hearty tomato-based soup with lentils and chickpeas.",
       "prep_time": "30 min",
       "cook_time": "45 min",
-      "servings": 6,
+      "servings": "10",
       "difficulty": "Medium",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580688/6c1aeabccbaae35006bd1eb8ea4b9ffb_xftqee.jpg",
       "ingredients": ["Tomatoes", "Lentils", "Chickpeas", "Celery", "Parsley", "Vermicelli"],
@@ -149,7 +122,6 @@
       ]
     },
     {
-      "id": "8",
       "title": "Zaalouk",
       "category_id": "1",
       "country": "Maroc",
@@ -158,13 +130,20 @@
       "cook_time": "20 min",
       "servings": 4,
       "difficulty": "Easy",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580773/7fcf19bb3d3c7d65cdfe278d89586faf_fg6zvw.jpg",
-      "ingredients": ["Eggplants", "Tomatoes", "Garlic", "Cumin", "Paprika"],
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580997/57e7a19334571946391a7430fcb86202_mhqrz5.jpg",
+      "ingredients": [
+        "Eggplants",
+        "Tomatoes",
+        "Garlic",
+        "Cumin",
+        "Paprika"
+      ],
       "instructions": [
         "Roast eggplants.",
         "Sauté tomatoes and spices.",
         "Mash eggplant into mixture and cook down."
-      ]
+      ],
+      "id": "8"
     },
     {
       "id": "9",
@@ -185,8 +164,7 @@
       ]
     },
     {
-      "id": "10",
-      "title": "Classic Caesar Salad",
+      "title": "Classic Caesar Salades",
       "category_id": "5",
       "country": "International",
       "description": "Crisp romaine lettuce with parmesan and croutons.",
@@ -200,10 +178,10 @@
         "Chop lettuce.",
         "Toss with dressing.",
         "Top with cheese and croutons."
-      ]
+      ],
+      "id": "10"
     },
     {
-      "id": "11",
       "title": "Spaghetti Carbonara",
       "category_id": "2",
       "country": "Italie",
@@ -212,16 +190,22 @@
       "cook_time": "15 min",
       "servings": 2,
       "difficulty": "Medium",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580962/48285145054a6d747befd1a2a6700924_ghf6i1.jpg",
-      "ingredients": ["Spaghetti", "Guanciale/Bacon", "Pecorino", "Eggs", "Pepper"],
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580997/57e7a19334571946391a7430fcb86202_mhqrz5.jpg",
+      "ingredients": [
+        "Spaghetti",
+        "Guanciale/Bacon",
+        "Pecorino",
+        "Eggs",
+        "Pepper"
+      ],
       "instructions": [
         "Boil pasta and fry bacon.",
         "Whisk eggs and cheese.",
         "Toss hot pasta with egg mix off heat."
-      ]
+      ],
+      "id": "11"
     },
     {
-      "id": "12",
       "title": "Margherita Pizza",
       "category_id": "2",
       "country": "Italie",
@@ -236,7 +220,8 @@
         "Stretch dough.",
         "Add sauce and cheese.",
         "Bake at max heat."
-      ]
+      ],
+      "id": "12"
     },
     {
       "id": "13",
@@ -275,14 +260,13 @@
       ]
     },
     {
-      "id": "15",
       "title": "Shakshuka",
       "category_id": "5",
       "country": "Middle East",
       "description": "Eggs poached in a sauce of tomatoes and peppers.",
       "prep_time": "10 min",
       "cook_time": "20 min",
-      "servings": 3,
+      "servings": "4",
       "difficulty": "Easy",
       "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581110/28aab2440fe80f51921d630a825571dc_iuzco1.jpg",
       "ingredients": ["Eggs", "Tomatoes", "Peppers", "Onion", "Cumin"],

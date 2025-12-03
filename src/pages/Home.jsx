@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"; // 1. Import useNavigate
 import "./Home.css";
 import jsonFile from '../data/app.json'; 
 
+
 export default function Home() {
   const countryList = jsonFile && jsonFile.data ? jsonFile.data : [];
   

@@ -3,18 +3,23 @@ import food from '../../data/app.json'
 import Card from '../../components/Card';
 import './ManageRecipes.css'
 import { RiHomeLine } from "react-icons/ri"
+import CardAdmin from '../../components/CardAdmin';
+import { Link } from 'react-router-dom';
 const ManageRecipes = () => {
 
   const [search,setSearch] = useState("")
   return (
+    <div className='bg-white' >
+
+    
     <div className='pl-[90px] pr-[90px]'>
     <div className=' bg-[#eeeded] pl-[15px] pr-[15px] pt-[15px] ' >
       <div className='flex flex-col gap-[30px]'>
         <div className='flex place-content-between'>
           <input type="text" placeholder='Search By Name' onChange={(e) => setSearch(e.target.value)} className='w-[350px] p-[5px] bg-white rounded '   />
           <div className='flex gap-[10px]'>
-                 <button className='bg-green-600 hover:bg-green-700 text-white w-[150px] txt2 rounded ' >Go To Home</button>
-                 <button className='bg-blue-600 hover:bg-blue-700 text-white w-[150px] txt2 rounded'>Add Recepies</button>
+                 <button className='bg-green-600 hover:bg-green-700 text-white w-[150px] txt2 rounded ' ><Link className='text-white txt2 ' to="/">Go To Home</Link></button>
+                 <button className='bg-blue-600 hover:bg-blue-700 text-white w-[150px] txt2 rounded'><Link className='text-white txt2 ' to="/add">Add Recipes</Link></button>
           </div>
           
         </div>
@@ -35,7 +40,7 @@ const ManageRecipes = () => {
             
             .map((index) => {
               return(
-                <Card title={index.title}
+                <CardAdmin title={index.title}
                  country={index.country}
                   id={index.id}
                    style={{ animationDelay: `${index * 150}ms` }}
@@ -56,6 +61,7 @@ const ManageRecipes = () => {
        </div>
     </div>
     </div>
+  </div>
   );
 }
 

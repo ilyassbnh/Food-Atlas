@@ -1,0 +1,95 @@
+body{
+    display: flex ;
+  text-align: center;
+  justify-items: center;
+  justify-content: center;
+
+}/* src/pages/Contact.css */
+
+/* 1. Global Page Layout (Inherits background from Home, but ensures alignment) */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Centers form vertically */
+  padding: 20px;
+}
+
+/* 2. Form Styling - Matches the "Paragraph Box" from Home */
+form {
+  background-color: rgba(179, 136, 136, 0.95); /* Dusty pink/red from Home */
+  padding: 30px;
+  border-radius: 15px; /* Matches Home border-radius */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* We use !important here just to ensure we override browser defaults if needed, 
+     though your JSX inline style sets the width. */
+  box-sizing: border-box;
+}
+
+/* 3. Typography */
+form h2 {
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* 4. Inputs and Textarea */
+form input,
+form textarea {
+  width: 100%; /* Fills the container */
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px; /* Slightly rounded inputs */
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: rgba(255, 255, 255, 0.9); /* High contrast for typing */
+  color: #333;
+  transition: box-shadow 0.3s ease;
+}
+
+form textarea {
+  min-height: 120px;
+  resize: vertical; /* Allows user to make it taller, but not wider */
+}
+
+/* Focus Effect - Uses the Yellow from Home Cards */
+form input:focus,
+form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffdf8c; 
+}
+
+/* 5. Submit Button - Matches "Main CTA Btn" from Home */
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  background-color: #ff5722; /* The Home Orange */
+  color: white;
+  border: none;
+  border-radius: 30px; /* Pill shape like Home button */
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e64a19; /* Darker orange on hover */
+  transform: translateY(-2px);
+}
+
+form button:active {
+  transform: scale(0.98);
+}

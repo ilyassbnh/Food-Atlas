@@ -1,6 +1,8 @@
 import { useState } from "react";
  import '../pages/Contact.css'
-export default function Contact() {
+ import "../components/Navbar"
+ export default function Contact() {
+
 
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 

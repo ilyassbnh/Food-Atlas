@@ -11,12 +11,13 @@ body {
 }
 
 .intro-container {
-  display: flex;
-  justify-content: center;
+ 
   padding: 40px 20px;
 }
 
-.paragraph-box {
+.paragraph-box { 
+  display: flex;
+  justify-content: center;
   background-color: rgba(179, 136, 136, 0.95);
   padding: 30px;
   border-radius: 15px;

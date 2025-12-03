@@ -1,15 +1,22 @@
 .navbar {
-  background-color: #333;
+  background-color: rgba(67, 12, 5, 0.8);
   height: 70px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
 }
+.logo{
+  width: 60px;
+  height: 60px;
+  margin-left: 0px;
+}
+
 .nav-logo {
   background-color: #ff5722; 
   color: white;              

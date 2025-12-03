@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import RecipeDetails from './pages/RecipeDetails';
 import Contact from './pages/Contact';
 import Test from './components/Test';
+import Recipes from './pages/Recipes'
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/recipes/:id" element={<RecipeDetails />} />
+        <Route path="/recipes" element={<Recipes/>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/test" element={<Test />} />
       </Routes>

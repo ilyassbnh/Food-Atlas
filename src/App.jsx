@@ -13,6 +13,8 @@ import RecipeDetails from './pages/RecipeDetails';
 import Contact from './pages/Contact';
 import Test from './components/Test';
 import Recipes from './pages/Recipes';
+import Add from './pages/add';
+
 import ManageRecipes from './pages/Admin/ManageRecipes'
 
 import './App.css';
@@ -23,12 +25,6 @@ function App() {
     cloud: { cloudName: 'dtpjdj7m4' }
   });
 
-  return (
-    <>
-   
-      <Add />
-    </>
-  )
     <BrowserRouter>
       <Navbar />
        <Toaster richColors position='top-right' />
@@ -38,6 +34,8 @@ function App() {
         <Route path="/recipes" element={<Recipes/>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/add" element={<Add />} />
+        
           
       </Routes>
     </BrowserRouter>

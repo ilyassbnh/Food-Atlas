@@ -1,7 +1,7 @@
 .cardRecipe {
   width: 260px;
-  padding: 12px;
-  border-radius: 12px;
+  padding: 19px;
+  border-radius: 50px;
   background: #EEE6D8;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
@@ -27,7 +27,13 @@
 }
 
 .cardRecipe-country {
-  font-size: 14px;
-  color: rgb(9, 2, 20);
+  font-size: 15px;
+  color: #430C05;
   margin-top: 5px;
+}
+.btn{
+  background-color: #a56e67;
+  border-radius: 20px;
+  padding: 8px;
+  width: 90px;
 }

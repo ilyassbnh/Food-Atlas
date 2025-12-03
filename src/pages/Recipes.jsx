@@ -6,7 +6,8 @@ import "./Recipes.css";
 export default function Recipes() {
   const [recipe, setRecipe] = useState([]);
   const [filtre, setFiltre] = useState("");
-  const [pay,setPay] = useState(false)
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
     axios
       .get("http://localhost:3001/recipes")
@@ -14,138 +15,76 @@ export default function Recipes() {
       .catch(error => console.log("Erreur :", error));
   }, []);
 
-
-  // Filtrer 
   const recettesFiltrees =
     filtre === "" ? recipe : recipe.filter(item => item.country === filtre);
 
   return (
     <div className="recipes-page">
-      <h1 className="text">
-        IT's not just a Food <br /> It's an Experience
-      </h1>
-      <button onClick={() => setPay(true)}>Filter</button>
-      {/* PARTIE FILTRE */}
-      {pay && (
-            <div className="filtre-buttons">
-  <button
-    className={filtre === "" ? "active" : ""}
-    onClick={() => {
-      setFiltre("");
-      setPay(false);
-    }}
-  >
-    All
-  </button>
-  <button
-    className={filtre === "Maroc" ? "active" : ""}
-    onClick={() => {
-      setFiltre("Maroc");
-      setPay(false);
-    }}
-  >
-    Morocco
-  </button>
-  <button
-    className={filtre === "Italie" ? "active" : ""}
-    onClick={() => {
-      setFiltre("Italie");
-      setPay(false);
-    }}
-  >
-    Italie
-  </button>
-  <button
-    className={filtre === "Thaïlande" ? "active" : ""}
-    onClick={() => {
-      setFiltre("Thaïlande");
-      setPay(false);
-    }}
-  >
-    Thaïlande
-  </button>
-  <button
-    className={filtre === "France" ? "active" : ""}
-    onClick={() => {
-      setFiltre("France");
-      setPay(false);
-    }}
-  >
-    France
-  </button>
-  <button
-    className={filtre === "USA" ? "active" : ""}
-    onClick={() => {
-      setFiltre("USA");
-      setPay(false);
-    }}
-  >
-    USA
-  </button>
-  <button
-    className={filtre === "International" ? "active" : ""}
-    onClick={() => {
-      setFiltre("International");
-      setPay(false);
-    }}
-  >
-    International
-  </button>
-  <button
-    className={filtre === "Inde" ? "active" : ""}
-    onClick={() => {
-      setFiltre("Inde");
-      setPay(false);
-    }}
-  >
-    Inde
-  </button>
-  <button
-    className={filtre === "Mexique" ? "active" : ""}
-    onClick={() => {
-      setFiltre("Mexique");
-      setPay(false);
-    }}
-  >
-    Mexique
-  </button>
-  <button
-    className={filtre === "Japon" ? "active" : ""}
-    onClick={() => {
-      setFiltre("Japon");
-      setPay(false);
-    }}
-  >
-    Japon
-  </button>
-</div>
+      <h1 className="text"> IT's not just a Food <br /> It's an Experience </h1>
 
-      )}
-      
+      {/* Partie filtre + search */}
+      <div className="fsearch">
+        <input 
+          className="search" 
+          type="text" 
+          placeholder="Search by name..." 
+          onChange={(event) => setSearch(event.target.value)} 
+        />
 
-      {/*pour affiche le filtre */}
-      <div className="filtrepage">
-        {filtre === "" ? "Toutes les recettes" : filtre}
+        <select 
+          value={filtre}
+          onChange={(e) => setFiltre(e.target.value)}
+          className="select-filtre"
+        >
+          <option value="">All</option>
+          <option value="Maroc">Maroc</option>
+          <option value="Italie">Italie</option>
+          <option value="Thaïlande">Thaïlande</option>
+          <option value="France">France</option>
+          <option value="USA">USA</option>
+          <option value="International">International</option>
+          <option value="Inde">Inde</option>
+          <option value="Mexique">Mexique</option>
+          <option value="Japon">Japon</option>
+        </select>
       </div>
 
       {/* Partie recettes */}
-      <div className="Recette">
-        <p >Recettes</p>
-        <div className="recipes-container">
-          {recettesFiltrees.length > 0 ? (
-            recettesFiltrees.map(item => (
-              <Card
-                key={item.id}
-                image={item.image}
-                title={item.title}
-                country={item.country}
-              />
-            ))
-          ) : (
-            <p className="empty">Aucune recette disponible...</p>
-          )}
-        </div>
+      {/* Partie recettes */}
+<div className="recipes-container">
+
+  {recettesFiltrees
+      .filter(item =>
+        search === "" 
+          ? true 
+          : item.title.toLowerCase().includes(search.toLowerCase())
+      )
+      .length > 0 ? (
+
+      recettesFiltrees
+        .filter(item =>
+          search === "" 
+            ? true 
+            : item.title.toLowerCase().includes(search.toLowerCase())
+        )
+        .map(item => (
+          <Card
+            key={item.id}
+            image={item.image}
+            title={item.title}
+            country={item.country}
+          />
+        ))
+
+    ) : (
+      <div className="empty">
+        <p>No recipes found...</p>
       </div>
+    )
+  }
+
+</div>
+
     </div>
   );
 }

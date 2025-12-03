@@ -70,6 +70,7 @@ export default function Recipes() {
         .map(item => (
           <Card
             key={item.id}
+            id={item.id}
             image={item.image}
             title={item.title}
             country={item.country}

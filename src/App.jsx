@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import Add from './pages/add'
+import { BrowserRouter ,Routes, Route , } from 'react-router-dom'
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Cloudinary } from '@cloudinary/url-gen';
@@ -21,6 +24,11 @@ function App() {
   });
 
   return (
+    <>
+   
+      <Add />
+    </>
+  )
     <BrowserRouter>
       <Navbar />
        <Toaster richColors position='top-right' />

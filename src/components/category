@@ -1,0 +1,54 @@
+const uploadImageToCloudinary = async (file) => {
+  console.log("🔵 Starting Cloudinary upload…");
+  console.log("📁 File received:", file);
+
+  if (!file) {
+    console.error("❌ No file provided to uploadImageToCloudinary");
+    toast.error("No file selected");
+    return null;
+  }
+
+  try {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "unsigned_preset");
+
+    console.log("📤 Sending upload request to Cloudinary...");
+
+    const response = await fetch(
+      "https://api.cloudinary.com/v1_1/dtpjdj7m4/image/upload",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    console.log("🟡 Cloudinary raw response:", response);
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("❌ Cloudinary upload failed. Status:", response.status);
+      console.error("🔍 Cloudinary error response:", errorText);
+      toast.error("Cloudinary upload failed");
+      return null;
+    }
+
+    const data = await response.json();
+    console.log("🟢 Cloudinary upload success:", data);
+
+    if (!data.secure_url) {
+      console.error("❌ secure_url missing in Cloudinary response:", data);
+      toast.error("Cloudinary did not return an image URL");
+      return null;
+    }
+
+    console.log("✅ Final image URL:", data.secure_url);
+    return data.secure_url;
+
+  } catch (error) {
+    console.error("💥 Exception thrown during Cloudinary upload:");
+    console.error(error);
+    toast.error("Unexpected error — check console");
+    return null;
+  }
+};

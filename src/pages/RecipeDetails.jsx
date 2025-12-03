@@ -12,7 +12,6 @@ const RecipeDetails = () => {
     const fetchRecipe = async () => {
       try {
         setLoading(true);
-        // ⚠️ Make sure this port matches your JSON Server (5000)
         const response = await axios.get(`http://localhost:5000/recipes/${id}`);
         setRecipe(response.data);
         setError(null);
@@ -20,14 +19,13 @@ const RecipeDetails = () => {
         console.error("Error fetching recipe:", err);
         setError("Impossible de charger la recette. Vérifiez que JSON Server est lancé sur le port 5000.");
       } finally {
-        setLoading(false); // Stop loading regardless of success/fail
+        setLoading(false);
       }
     };
 
     fetchRecipe();
   }, [id]);
 
-  // --- 1. Loading State ---
   if (loading) {
     return (
       <div className="container text-center mt-5" style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -37,7 +35,6 @@ const RecipeDetails = () => {
     );
   }
 
-  // --- 2. Error State ---
   if (error) {
     return (
       <div className="container text-center mt-5">
@@ -51,12 +48,10 @@ const RecipeDetails = () => {
     );
   }
 
-  // --- 3. Not Found (Safety) ---
   if (!recipe) {
     return <div className="container mt-5 text-center">Recette introuvable.</div>;
   }
 
-  // --- 4. Main UI ---
   return (
     <div className="container my-5">
       {/* Back Button */}

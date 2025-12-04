@@ -81,7 +81,7 @@ const uploadImageToCloudinary = async (file) => {
 
    const Delete = (id) => {
     axios.delete(`http://localhost:5000/recipes/${id}`)
-      .then((res) => {
+      .then((res) => { 
         console.log("deleted", res)
       })
       .catch((err) => {
@@ -91,8 +91,8 @@ const uploadImageToCloudinary = async (file) => {
       toast.success("recepie has been deleted")
    }
 
-   const Edit = (id) =>{
-    axios.put(`http://localhost:5000/recipes/${id}`,{
+   const Edit = async (id) =>{
+     await axios.put(`http://localhost:5000/recipes/${id}`,{
       title : title,
      category_id : category_id,
      country : country,
@@ -177,7 +177,7 @@ const uploadImageToCloudinary = async (file) => {
 
         {/* Country */}
         <div>
-          <label className="text-sm font-medium">Country</label>
+          <label className="text-sm font-medium text-left">Country</label>
           <input type="text" value={country} className="w-full p-2 border rounded" onChange={(e) => setCountry(e.target.value)} />
         </div>
 
@@ -215,35 +215,48 @@ const uploadImageToCloudinary = async (file) => {
 
         {/* Image URL */}
         {/* Image Upload */}
-<input
-  type="file"
-  accept="image/*"
-  className="w-full p-2 border rounded"
-  onChange={ async (e) => {
-    const file = e.target.files[0];
-    if (!file) return; // user canceled selection → do nothing
+{/* Image Upload */}
+<div>
+  <label className="text-sm font-medium">Current Image</label>
+   
+  <input
+    type="file"
+    accept="image/*"
+    className="w-full p-2 border rounded"
+    onChange={async (e) => {
+      const file = e.target.files?.[0];
+      if (!file) {
+        console.log("No file selected, keeping current image");
+        return; // Keep existing image
+      }
 
-    const url = await uploadImageToCloudinary(file);
+      console.log("📸 New image selected, uploading...");
+      const url = await uploadImageToCloudinary(file);
 
-    if (url) {
-      setImage(url);
-    } else {
-      toast.error("Image upload failed — keeping old image");
-    }
-  }}
-/>
+      if (url) {
+        console.log("✅ Image uploaded successfully:", url);
+        setImage(url);
+        toast.success("Image uploaded successfully");
+      } else {
+        console.error("❌ Upload failed, keeping old image");
+        toast.error("Image upload failed — keeping old image");
+      }
+    }}
+  />
+  <p className="text-xs text-gray-500 mt-1">Leave empty to keep current image</p>
+</div>
 
 
 
         {/* Ingredients */}
         <div>
-          <label className="text-sm font-medium">Ingredients (comma separated)</label>
+          <label className="text-sm font-medium text-left block">Ingredients (comma separated)</label>
           <textarea value={ingredients?.join(', ')} className="w-full p-2 border rounded" rows={3} onChange={(e) => setIngredients(e.target.value.split(',').map(item => item.trim()))}></textarea>
         </div>
 
         {/* Instructions */}
         <div>
-          <label className="text-sm font-medium">Instructions (comma separated)</label>
+          <label className="text-sm font-mediumtext-left block">Instructions (comma separated)</label>
           <textarea value={instructions?.join(', ')} className="w-full p-2 border rounded" rows={5} onChange={(e) => setInstructions(e.target.value.split(',').map(item => item.trim()))}></textarea>
         </div>
 
@@ -257,7 +270,7 @@ const uploadImageToCloudinary = async (file) => {
             Cancel
           </button>
           <button
-            type="submit"
+            type="button"
             className='bg-blue-600 hover:bg-blue-700 text-white w-[100px] rounded py-2'
             onClick={() => Edit(props.id)}
           >

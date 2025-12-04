@@ -16,7 +16,7 @@ body{
 }
 
 /* 2. Form Styling - Matches the "Paragraph Box" from Home */
-form {
+.form-contact {
   background-color: rgba(179, 136, 136, 0.95); /* Dusty pink/red from Home */
   padding: 30px;
   border-radius: 15px; /* Matches Home border-radius */
@@ -31,7 +31,7 @@ form {
 }
 
 /* 3. Typography */
-form h2 {
+.h2-contact {
   font-family: Arial, sans-serif;
   font-size: 2rem;
   margin-top: 0;
@@ -42,8 +42,7 @@ form h2 {
 }
 
 /* 4. Inputs and Textarea */
-form input,
-form textarea {
+.input-contact {
   width: 100%; /* Fills the container */
   box-sizing: border-box; /* Ensures padding doesn't break layout */
   padding: 12px 15px;
@@ -57,20 +56,19 @@ form textarea {
   transition: box-shadow 0.3s ease;
 }
 
-form textarea {
+.input-contact{
   min-height: 120px;
   resize: vertical; /* Allows user to make it taller, but not wider */
 }
 
 /* Focus Effect - Uses the Yellow from Home Cards */
-form input:focus,
-form textarea:focus {
+.input-contact:focus {
   outline: none;
   box-shadow: 0 0 0 3px #ffdf8c; 
 }
 
 /* 5. Submit Button - Matches "Main CTA Btn" from Home */
-form button {
+.btn-contact {
   width: 100%;
   padding: 12px;
   margin-top: 10px;
@@ -85,11 +83,11 @@ form button {
   transition: all 0.3s ease;
 }
 
-form button:hover {
+.btn-contacthover {
   background-color: #e64a19; /* Darker orange on hover */
   transform: translateY(-2px);
 }
 
-form button:active {
+.btn-contact:active {
   transform: scale(0.98);
 }

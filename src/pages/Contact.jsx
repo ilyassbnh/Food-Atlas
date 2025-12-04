@@ -18,11 +18,12 @@ import { useState } from "react";
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ width: "300px", margin: "40px auto" }}>
+    <form className="form-contact" onSubmit={handleSubmit} style={{ width: "300px", margin: "40px auto" }}>
       
-      <h2>Contact</h2>
+      <h2 className="h2-contact">Contact</h2>
 
       <input 
+      className="input-contact"
         name="name"
         placeholder="Nom"
         value={form.name}
@@ -30,7 +31,8 @@ import { useState } from "react";
         required
       /><br/>
 
-      <input 
+      <input
+      className="input-contact" 
         name="email"
         type="email"
         placeholder="Email"
@@ -40,6 +42,7 @@ import { useState } from "react";
       /><br/>
 
       <textarea
+      className="input-contact"
         name="message"
         placeholder="Message"
         value={form.message}
@@ -47,7 +50,7 @@ import { useState } from "react";
         required
       ></textarea><br/>
 
-      <button type="submit">Envoyer</button>
+      <button className="btn-contact" type="submit">Envoyer</button>
     </form>
   );
 }

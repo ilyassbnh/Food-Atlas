@@ -1,95 +1,125 @@
-body{
-    display: flex ;
-  text-align: center;
-  justify-items: center;
-  justify-content: center;
+/* src/pages/Contact.css */
 
-}/* src/pages/Contact.css */
-
-/* 1. Global Page Layout (Inherits background from Home, but ensures alignment) */
+/* 1. Container: Centers the form in the middle of the screen */
 .contact-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; /* Centers form vertically */
+  width: 100%;
+  min-height: 85vh; /* Centers vertically */
   padding: 20px;
-}
-
-/* 2. Form Styling - Matches the "Paragraph Box" from Home */
-form {
-  background-color: rgba(179, 136, 136, 0.95); /* Dusty pink/red from Home */
-  padding: 30px;
-  border-radius: 15px; /* Matches Home border-radius */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* We use !important here just to ensure we override browser defaults if needed, 
-     though your JSX inline style sets the width. */
   box-sizing: border-box;
 }
 
-/* 3. Typography */
+/* 2. THE FORM BOX */
+form {
+  background-color: rgba(179, 136, 136, 0.95); /* Dusty Pink */
+  width: 100%;
+  max-width: 900px; /* Limits width so it doesn't look stretched */
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  
+  /* GRID: Creates the Left/Right Horizontal Split */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 50% Left, 50% Right */
+  gap: 40px; /* Space between the two sides */
+  align-items: start;
+}
+
+/* LEFT SIDE: Title and Inputs */
+.form-left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* RIGHT SIDE: Message Area */
+.form-right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Typography */
 form h2 {
   font-family: Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-top: 0;
-  margin-bottom: 25px;
-  text-align: center;
+  margin-bottom: 20px;
   color: white;
   text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* 4. Inputs and Textarea */
+/* Input Fields */
 form input,
 form textarea {
-  width: 100%; /* Fills the container */
-  box-sizing: border-box; /* Ensures padding doesn't break layout */
-  padding: 12px 15px;
-  margin-bottom: 15px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 5px; /* Small margin */
   border: none;
-  border-radius: 8px; /* Slightly rounded inputs */
+  border-radius: 8px;
   font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
   font-family: inherit;
-  background-color: rgba(255, 255, 255, 0.9); /* High contrast for typing */
-  color: #333;
-  transition: box-shadow 0.3s ease;
 }
 
 form textarea {
-  min-height: 120px;
-  resize: vertical; /* Allows user to make it taller, but not wider */
+  height: 100%; /* Fills the height of the right side */
+  min-height: 200px;
+  resize: none; /* Prevents user resizing */
 }
 
-/* Focus Effect - Uses the Yellow from Home Cards */
+/* Focus Styles */
 form input:focus,
 form textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 3px #ffdf8c; 
+  box-shadow: 0 0 0 3px #ffdf8c;
 }
 
-/* 5. Submit Button - Matches "Main CTA Btn" from Home */
+/* ERROR MESSAGE STYLING (The Red Text) */
+.error-msg {
+  color: #7a0000; /* Dark red text */
+  background-color: #ffcccc; /* Light red background */
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-top: 2px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* SUBMIT BUTTON */
 form button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
+  grid-column: 1 / -1; /* Spans across both columns at the bottom */
+  margin-top: 20px;
+  padding: 15px;
   font-size: 1.2rem;
-  background-color: #ff5722; /* The Home Orange */
+  background-color: #ff5722;
   color: white;
   border: none;
-  border-radius: 30px; /* Pill shape like Home button */
+  border-radius: 50px;
   cursor: pointer;
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
+  transition: transform 0.2s;
 }
 
 form button:hover {
-  background-color: #e64a19; /* Darker orange on hover */
+  background-color: #e64a19;
   transform: translateY(-2px);
 }
 
-form button:active {
-  transform: scale(0.98);
+/* MOBILE RESPONSIVE: Stacks them vertically on phones */
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr; /* Switch to 1 column */
+    padding: 30px;
+  }
+  
+  form textarea {
+    height: 150px;
+    margin-top: 20px;
+  }
 }

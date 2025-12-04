@@ -1,53 +1,134 @@
-import { useState } from "react";
- import '../pages/Contact.css'
- import "../components/Navbar"
- export default function Contact() {
+import React, { useState } from 'react';
+import './Contact.css';
+import { toast } from 'sonner';
 
+const Contact = () => {
+  // 1. State to hold the input values
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  // 2. State to hold the error messages
+  const [errors, setErrors] = useState({});
 
-  function handleChange(e) {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  }
+  // Handle typing in inputs
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    
+    // Update value
+    setFormData({
+      ...formData,
+      [name]: value
+    });
 
-  function handleSubmit(e) {
+    // Clear error for this specific field immediately when user starts typing
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: ''
+      });
+    }
+  };
+
+  // 3. Validation Logic
+  const validate = () => {
+    let newErrors = {};
+    let isValid = true;
+
+    // Check Name
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required.";
+      isValid = false;
+    }
+
+    // Check Email
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required.";
+      isValid = false;
+    } else if (!formData.email.includes('@')) {
+      newErrors.email = "Email must contain an '@' symbol.";
+      isValid = false;
+    }
+
+    // Check Message
+    if (!formData.message.trim()) {
+      newErrors.message = "Message cannot be empty.";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  // Handle Submit
+  const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Merci ${form.name}, message envoyé !`);
-    setForm({ name: "", email: "", message: "" });
-  
-  }
+
+    if (validate()) {
+      // Success!
+      toast.success("Message sent successfully!");
+      console.log("Form Data:", formData);
+      
+      // Clear form after success
+      setFormData({ name: '', email: '', message: '' });
+      setErrors({});
+    } else {
+      // Failure
+      toast.error("Please fix the errors highlighted in red.");
+    }
+  };
 
   return (
-    <form onSubmit={handleSubmit} style={{ width: "300px", margin: "40px auto" }}>
-      
-      <h2>Contact</h2>
+    <div className="contact-container">
+      <form onSubmit={handleSubmit}>
+        
+        {/* LEFT SIDE: Name & Email */}
+        <div className="form-left">
+          <h2>Contact Us</h2>
+          
+          {/* Name Input */}
+          <input 
+            type="text" 
+            name="name" 
+            placeholder="Name" 
+            value={formData.name}
+            onChange={handleChange}
+            style={{ border: errors.name ? '3px solid #7a0000' : 'none' }}
+          />
+          {errors.name && <span className="error-msg">{errors.name}</span>}
 
-      <input 
-        name="name"
-        placeholder="Nom"
-        value={form.name}
-        onChange={handleChange}
-        required
-      /><br/>
+          {/* Email Input */}
+          <input 
+            type="text" 
+            name="email" 
+            placeholder="Email" 
+            value={formData.email}
+            onChange={handleChange}
+            style={{ border: errors.email ? '3px solid #7a0000' : 'none' }}
+          />
+          {errors.email && <span className="error-msg">{errors.email}</span>}
+        </div>
 
-      <input 
-        name="email"
-        type="email"
-        placeholder="Email"
-        value={form.email}
-        onChange={handleChange}
-        required
-      /><br/>
+        {/* RIGHT SIDE: Message */}
+        <div className="form-right">
+          <textarea 
+            name="message" 
+            placeholder="Type your message here..." 
+            value={formData.message}
+            onChange={handleChange}
+            style={{ border: errors.message ? '3px solid #7a0000' : 'none' }}
+          ></textarea>
+          {errors.message && <span className="error-msg">{errors.message}</span>}
+        </div>
 
-      <textarea
-        name="message"
-        placeholder="Message"
-        value={form.message}
-        onChange={handleChange}
-        required
-      ></textarea><br/>
-
-      <button type="submit">Envoyer</button>
-    </form>
+        {/* BOTTOM: Submit Button */}
+        <button type="submit">Send Message</button>
+        
+      </form>
+    </div>
   );
-}
+};
+
+export default Contact;

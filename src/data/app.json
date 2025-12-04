@@ -53,30 +53,6 @@
       "id": "1"
     },
     {
-      "title": "Beef Tagine with Prunes",
-      "category_id": "1",
-      "country": "Morroco",
-      "description": "A sweet and savory Moroccan classic featuring tender beef and caramelized prunes.",
-      "prep_time": "20 min",
-      "cook_time": "120 min",
-      "servings": "5",
-      "difficulty": "Medium",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580245/ea228ce9cd9e0d2ed76054b778a67633_drvsot.jpg",
-      "ingredients": [
-        "1kg beef shank",
-        "200g prunes",
-        "Onions",
-        "Cinnamon",
-        "Honey",
-        "Almonds"
-      ],
-      "instructions": [
-        "Sear beef with onions.",
-        "Simmer with spices for 1.5 hours.",
-        "Caramelize prunes and top the beef."
-      ]
-    },
-    {
       "title": "Seven Vegetable Couscous",
       "category_id": "1",
       "country": "Morocco",
@@ -99,7 +75,8 @@
         "Steam couscous grains 3 times.",
         "Cook meat and hard veggies in broth.",
         "Add soft veggies later and serve."
-      ]
+      ],
+      "id": "7184"
     },
     {
       "title": "Harira Soup",
@@ -123,7 +100,8 @@
         "Sauté herbs and onions.",
         "Simmer with tomatoes and lentils.",
         "Thicken and add vermicelli."
-      ]
+      ],
+      "id": "945b"
     },
     {
       "id": "7",
@@ -148,54 +126,6 @@
         "Cook and shred chicken.",
         "Cook eggs in onion sauce.",
         "Layer dough, fillings, and bake."
-      ]
-    },
-    {
-      "title": "Zaalouk",
-      "category_id": "1",
-      "country": "Maroc",
-      "description": "A smoky roasted eggplant and tomato dip.",
-      "prep_time": "10 min",
-      "cook_time": "20 min",
-      "servings": 4,
-      "difficulty": "Easy",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580997/57e7a19334571946391a7430fcb86202_mhqrz5.jpg",
-      "ingredients": [
-        "Eggplants",
-        "Tomatoes",
-        "Garlic",
-        "Cumin",
-        "Paprika"
-      ],
-      "instructions": [
-        "Roast eggplants.",
-        "Sauté tomatoes and spices.",
-        "Mash eggplant into mixture and cook down."
-      ],
-      "id": "8"
-    },
-    {
-      "id": "9",
-      "title": "Grilled Salmon Bowl",
-      "category_id": "5",
-      "country": "International",
-      "description": "Omega-3 rich salmon served over brown rice.",
-      "prep_time": "15 min",
-      "cook_time": "10 min",
-      "servings": 2,
-      "difficulty": "Easy",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580817/03cc88306036dfae8423c5c1762dc15a_p8rutz.jpg",
-      "ingredients": [
-        "Salmon fillet",
-        "Brown rice",
-        "Avocado",
-        "Edamame",
-        "Soy sauce"
-      ],
-      "instructions": [
-        "Cook brown rice.",
-        "Grill salmon.",
-        "Assemble bowl with veggies."
       ]
     },
     {
@@ -336,7 +266,8 @@
         "Sauté veggies and spices.",
         "Add tomatoes and simmer.",
         "Crack eggs into sauce and cover."
-      ]
+      ],
+      "id": "c2d1"
     },
     {
       "id": "16",

@@ -7,6 +7,9 @@
   text-align: center;
   transition: 0.3s;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
 }
 
@@ -31,10 +34,26 @@
   font-size: 15px;
   color: #430C05;
   margin-top: 5px;
+   margin-left: auto;
+  margin-right: auto;
+}
+.icon1{
+  width:20px ;
+  height:20px ;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+Link{
+  width: 20px;
+  margin-left: 350px;
+  margin-right: auto;
 }
 .btn{
   background-color: #a56e67;
   border-radius: 20px;
   padding: 8px;
   width: 90px;
+  margin-left: auto;
+  margin-right: auto;
 }

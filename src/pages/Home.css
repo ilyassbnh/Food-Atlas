@@ -6,20 +6,9 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url('../img/Gemini_Generated_Image_qp0vjkqp0vjkqp0v.png'); 
   box-sizing: border-box; 
-}
 
-html, body, #root {
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden; /* No scrolling sideways */
-  margin: 0;
-  padding: 0;
-}
-
-/* 3. Main Container (Background) */
-.home-container {
-  background-image: url('../img/Gemini_Generated_Image_qp0vjkqp0vjkqp0v.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -35,7 +24,20 @@ html, body, #root {
   
   /* Add padding to top so content isn't hidden behind your Fixed Navbar */
 
+
 }
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; /* No scrolling sideways */
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Main Container (Background) */
+
+ 
 
 /* ----------------------------------------------------------- */
 /* 4. Rest of the CSS (Intro, Cards, Buttons)                  */

@@ -5,7 +5,7 @@ import './Navbar.css'  // <--- The fix: Added ./ before the name
 export default function Navbar() {
   return (
    <nav className="navbar">
-      <img  className="logo" src="../src/img/WhatsApp Image.jpg" alt="logo" />
+      <img  className="logo" src="../src/img/remove.png" alt="logo" />
         
         <div className="nav-links">
           {/* We use Link to="" instead of a href="" for React */}

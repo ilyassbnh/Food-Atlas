@@ -12,6 +12,7 @@ const RecipeDetails = () => {
     const fetchRecipe = async () => {
       try {
         setLoading(true);
+        // Ensure we are fetching data from the correct endpoint (e.g., /recipes/1)
         const response = await axios.get(`http://localhost:5000/recipes/${id}`);
         setRecipe(response.data);
         setError(null);
@@ -26,6 +27,7 @@ const RecipeDetails = () => {
     fetchRecipe();
   }, [id]);
 
+  // --- Loading and Error States ---
   if (loading) {
     return (
       <div className="container text-center mt-5" style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -51,9 +53,10 @@ const RecipeDetails = () => {
   if (!recipe) {
     return <div className="container mt-5 text-center">Recette introuvable.</div>;
   }
+  // -------------------------------
 
   return (
-    <div className="container my-5">
+    <div className="container my-5 bg-white text-dark">
       {/* Back Button */}
       <Link to="/" className="btn btn-outline-secondary mb-4 shadow-sm">
         <i className="bi bi-arrow-left"></i> &larr; Retour aux recettes
@@ -70,16 +73,15 @@ const RecipeDetails = () => {
       {/* Main Image */}
       <div className="row justify-content-center mb-5">
         <div className="col-lg-10">
-          <img 
-            src={recipe.image} 
-            alt={recipe.title} 
+          <img
+            src={recipe.image}
+            alt={recipe.title}
             className="img-fluid w-100 rounded-4 shadow-lg"
-            style={{ maxHeight: '500px', objectFit: 'cover' }} 
+            style={{ maxHeight: '500px', objectFit: 'cover' }}
           />
         </div>
       </div>
 
-      {/* Info Cards (Prep, Cook, etc.) */}
       <div className="row text-center mb-5 g-3">
         <div className="col-6 col-md-3">
           <div className="p-3 border bg-white rounded-3 shadow-sm h-100">
@@ -109,49 +111,62 @@ const RecipeDetails = () => {
         </div>
       </div>
 
-      <div className="row gy-5">
-        {/* LEFT COLUMN: Description & Instructions */}
+      <div className="row">
         <div className="col-lg-8">
           <div className="mb-5">
             <h3 className="border-bottom pb-2 mb-3 text-primary">À propos de ce plat</h3>
-            <p className="lead text-secondary">{recipe.description}</p>
+            {recipe.description ? (
+              <p className="lead text-secondary">{recipe.description}</p>
+            ) : (
+              <p className="lead text-muted">Aucune description disponible pour cette recette.</p>
+            )}
           </div>
 
-          <div>
-            <h3 className="border-bottom pb-2 mb-4 text-primary">Étapes de préparation</h3>
-            <div className="vstack gap-4">
-              {recipe.instructions && recipe.instructions.map((instr, index) => (
-                <div key={index} className="d-flex align-items-start">
-                  <div className="flex-shrink-0">
-                    <span className="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold shadow-sm" style={{ width: '40px', height: '40px' }}>
-                      {instr.step || index + 1}
-                    </span>
+          {/* Instructions Section */}
+          {recipe.instructions && recipe.instructions.length > 0 ? (
+            <div className="mb-5">
+              <h3 className="border-bottom pb-2 mb-4 text-primary">Étapes de préparation</h3>
+              <div className="vstack gap-4">
+                {recipe.instructions.map((instr, index) => (
+                  <div key={index} className="d-flex align-items-start">
+                    <div className="flex-shrink-0">
+                      <span className="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold shadow-sm" style={{ width: '40px', height: '40px' }}>
+                        {index + 1}
+                      </span>
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <p className="mb-0 fs-5 text-dark">{instr}</p>
+                    </div>
                   </div>
-                  <div className="flex-grow-1 ms-3">
-                    <p className="mb-0 fs-5 text-dark">{instr.text}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          ) : (
+            /* Fallback for missing instructions */
+            <div className="alert alert-info">
+              <h4 className="alert-heading">Instructions manquantes</h4>
+              <p>Les étapes de préparation ne sont pas encore disponibles pour cette recette.</p>
+            </div>
+          )}
         </div>
 
-        {/* RIGHT COLUMN: Ingredients */}
+        {/* RIGHT COLUMN: Ingredients (FIXED) */}
         <div className="col-lg-4">
-          <div className="card border-0 shadow-sm bg-light sticky-top" style={{ top: '20px', zIndex: 1 }}>
-            <div className="card-body p-4">
-              <h4 className="card-title mb-4 text-center">🛒 Ingrédients</h4>
-              <ul className="list-group list-group-flush bg-transparent">
-                {recipe.ingredients && recipe.ingredients.map((ingredient, index) => (
-                  <li key={index} className="list-group-item bg-transparent d-flex align-items-center px-0 py-2 border-bottom-0">
-                    <input className="form-check-input me-3" type="checkbox" id={`ing-${index}`} style={{ transform: 'scale(1.2)' }} />
-                    <label className="form-check-label fs-6" htmlFor={`ing-${index}`}>
-                      {ingredient}
-                    </label>
+          <div className="card shadow-sm border-0 bg-light p-3 sticky-top" style={{ top: '20px' }}>
+            <h3 className="card-title text-center text-dark mb-4">Ingrédients 🥗</h3>
+            {recipe.ingredients && recipe.ingredients.length > 0 ? (
+              <ul className="list-group list-group-flush">
+                {recipe.ingredients.map((ingredient, index) => (
+                  <li key={index} className="list-group-item bg-light d-flex align-items-center">
+                    <i className="bi bi-check-circle-fill text-success me-3"></i>
+                    {/* FIX: Ingredient is the string itself, not an object property */}
+                    <span className="text-dark">{ingredient}</span>
                   </li>
                 ))}
               </ul>
-            </div>
+            ) : (
+              <div className="alert alert-warning m-3">Liste des ingrédients non disponible.</div>
+            )}
           </div>
         </div>
       </div>

@@ -24,14 +24,14 @@ export default function Recipes() {
 
       {/* Partie filtre + search */}
       <div className="fsearch">
-        <input 
-          className="search" 
-          type="text" 
-          placeholder="Search by name..." 
-          onChange={(event) => setSearch(event.target.value)} 
+        <input
+          className="search"
+          type="text"
+          placeholder="Search by name..."
+          onChange={(event) => setSearch(event.target.value)}
         />
 
-        <select 
+        <select
           value={filtre}
           onChange={(e) => setFiltre(e.target.value)}
           className="select-filtre"
@@ -50,41 +50,40 @@ export default function Recipes() {
       </div>
 
       {/* Partie recettes */}
-      {/* Partie recettes */}
-<div className="recipes-container">
+      <div className="recipes-container">
 
-  {recettesFiltrees
-      .filter(item =>
-        search === "" 
-          ? true 
-          : item.title.toLowerCase().includes(search.toLowerCase())
-      )
-      .length > 0 ? (
+        {recettesFiltrees
+          .filter(item =>
+            search === ""
+              ? true
+              : item.title.toLowerCase().includes(search.toLowerCase())
+          )
+          .length > 0 ? (
 
-      recettesFiltrees
-        .filter(item =>
-          search === "" 
-            ? true 
-            : item.title.toLowerCase().includes(search.toLowerCase())
+          recettesFiltrees
+            .filter(item =>
+              search === ""
+                ? true
+                : item.title.toLowerCase().includes(search.toLowerCase())
+            )
+            .map(item => (
+              <Card
+                key={item.id}
+                id={item.id}
+                image={item.image}
+                title={item.title}
+                country={item.country}
+              />
+            ))
+
+        ) : (
+          <div className="empty">
+            <p>No recipes found...</p>
+          </div>
         )
-        .map(item => (
-          <Card
-            key={item.id}
-            id={item.id}
-            image={item.image}
-            title={item.title}
-            country={item.country}
-          />
-        ))
+        }
 
-    ) : (
-      <div className="empty">
-        <p>No recipes found...</p>
       </div>
-    )
-  }
-
-</div>
 
     </div>
   );

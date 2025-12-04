@@ -58,9 +58,10 @@ const RecipeDetails = () => {
   return (
     <div className="container my-5 bg-white text-dark">
       {/* Back Button */}
-      <Link to="/" className="btn btn-outline-secondary mb-4 shadow-sm">
-        <i className="bi bi-arrow-left"></i> &larr; Retour aux recettes
-      </Link>
+      <div className="d-flex justify-content-start pt-2 w-100 ">
+        <Link to="/recipes" className="btn btn-outline-secondary mb-4 shadow-sm">
+          <i className="bi bi-arrow-left"></i> &larr; Retour</Link>
+      </div>
 
       {/* Header */}
       <div className="text-center mb-5">

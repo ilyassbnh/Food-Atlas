@@ -20,8 +20,9 @@ export default function Recipes() {
 
   return (
     <div className="recipes-page">
+      <div className="texto">
       <h1 className="text"> IT's not just a Food <br /> It's an Experience </h1>
-
+</div>
       {/* Partie filtre + search */}
       <div className="fsearch">
         <input

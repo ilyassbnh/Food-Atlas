@@ -1,9 +1,8 @@
-
 /* div page */
 
 .recipes-page {
   padding: 30px;
-  background-color: #faf7f2;
+  background-color: rgb(250, 247, 242, 0.5);
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
@@ -15,12 +14,14 @@
   gap: 20px;
   color: #430C05;
   justify-content: space-between;
-  background-color: #f1e5d6;
+  background-color:rgb(67, 12, 5,0.5);
   padding: 50px;
   border-radius: 20px;
   margin: 40px auto;
   max-width: 1200px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  color: #5A3E36;
+  
 }
 
 /* search + filtre*/
@@ -38,19 +39,20 @@
 
 /* bar de recherche */
 .search {
-   padding: 12px 45px 12px 15px;
+  padding: 12px 45px 12px 15px;
   font-size: 15px;
   width: 260px;
   border-radius: 8px;
-  border: 2px solid #d4c4b8;
+  border:3px solid #430C05;
   background-color: #fff;
   color: #430C05;
-  background-image: url('../public/photo/search.png');  
+  background-image: url('../public/photo/search.png');
   background-repeat: no-repeat;
-  background-size: 20px;   
-  background-position: right 10px center; 
+  background-size: 20px;
+  background-position: right 10px center;
   transition: all 0.3s ease;
 }
+
 .search:focus {
   border-color: #b89278;
   box-shadow: 0 0 5px rgba(185, 146, 120, 0.4);
@@ -62,35 +64,42 @@
   padding: 12px;
   width: 160px;
   border-radius: 8px;
-  border: 2px solid #d4c4b8;
+  border: 3px solid #430C05;
   background-color: #fff;
   font-size: 15px;
-  color: #5b4a42;
+  color: #430C05;
   transition: all 0.3s ease;
 }
+
 .select-filtre:focus {
   border-color: #b89278;
   box-shadow: 0 0 5px rgba(185, 146, 120, 0.4);
   outline: none;
 }
+
 /* Titre */
-.text {
+.texto , .text{
+  background-color: rgb(67, 12, 5, 0.2);
   text-align: center;
-  color: #430C05;
-  font-family: "Georgia", serif;
-  font-size: 38px;
+  color:  white;
+  font-family: "Barlow Condensed", sans-serif;
+text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  font-size: 43px;
   font-weight: bold;
   border-bottom: 2px solid #d8c1ac;
   width: fit-content;
   margin: 0 auto 40px;
-  padding-bottom: 10px;
+  padding: 20px;
   line-height: 1.4;
+
 }
 
-.icon1{
+
+.icon1 {
   width: 35px;
   height: 35px;
 }
+
 .empty {
 
   text-align: center;

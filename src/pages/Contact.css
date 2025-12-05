@@ -12,7 +12,7 @@
 }
 
 /* 2. THE FORM BOX */
-form {
+.form {
   background-color: rgba(179, 136, 136, 0.95); /* Dusty Pink */
   width: 100%;
   max-width: 900px; /* Limits width so it doesn't look stretched */
@@ -41,7 +41,7 @@ form {
 }
 
 /* Typography */
-form h2 {
+.h2 {
   font-family: Arial, sans-serif;
   font-size: 2.5rem;
   margin-top: 0;
@@ -51,8 +51,8 @@ form h2 {
 }
 
 /* Input Fields */
-form input,
-form textarea {
+.input,
+.textarea {
   width: 100%;
   padding: 15px;
   margin-bottom: 5px; /* Small margin */
@@ -64,15 +64,15 @@ form textarea {
   font-family: inherit;
 }
 
-form textarea {
+.textarea {
   height: 100%; /* Fills the height of the right side */
   min-height: 200px;
   resize: none; /* Prevents user resizing */
 }
 
 /* Focus Styles */
-form input:focus,
-form textarea:focus {
+.input:focus,
+.textarea:focus {
   outline: none;
   box-shadow: 0 0 0 3px #ffdf8c;
 }
@@ -91,7 +91,7 @@ form textarea:focus {
 }
 
 /* SUBMIT BUTTON */
-form button {
+.button {
   grid-column: 1 / -1; /* Spans across both columns at the bottom */
   margin-top: 20px;
   padding: 15px;

@@ -250,30 +250,6 @@
       "id": "2afb"
     },
     {
-      "title": "Beef Tacos tacoos",
-      "category_id": "3",
-      "country": "Mexique",
-      "description": "Mexican street-style tacos with seasoned ground beef.",
-      "prep_time": "15 min",
-      "cook_time": "15 min",
-      "servings": 4,
-      "difficulty": "Easy",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764846539/q4ly2dg8qxktdtyzqupp.jpg",
-      "ingredients": [
-        "Corn tortillas",
-        "Ground beef",
-        "Lime",
-        "Cilantro",
-        "Onion"
-      ],
-      "instructions": [
-        "Brown beef with seasoning.",
-        "Warm tortillas.",
-        "Assemble with fresh toppings."
-      ],
-      "id": "16"
-    },
-    {
       "title": "Japanese Ramen",
       "category_id": "4",
       "country": "Japon",

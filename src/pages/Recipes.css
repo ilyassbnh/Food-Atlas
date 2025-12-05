@@ -14,12 +14,14 @@
   gap: 20px;
   color: #430C05;
   justify-content: space-between;
-  background-color: rgb(241, 229, 214, 0.5);
+  background-color:rgb(67, 12, 5,0.5);
   padding: 50px;
   border-radius: 20px;
   margin: 40px auto;
   max-width: 1200px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  color: #5A3E36;
+  
 }
 
 /* search + filtre*/
@@ -41,7 +43,7 @@
   font-size: 15px;
   width: 260px;
   border-radius: 8px;
-  border: 2px solid #d4c4b8;
+  border:3px solid #430C05;
   background-color: #fff;
   color: #430C05;
   background-image: url('../public/photo/search.png');
@@ -62,10 +64,10 @@
   padding: 12px;
   width: 160px;
   border-radius: 8px;
-  border: 2px solid #d4c4b8;
+  border: 3px solid #430C05;
   background-color: #fff;
   font-size: 15px;
-  color: #5b4a42;
+  color: #430C05;
   transition: all 0.3s ease;
 }
 
@@ -77,17 +79,17 @@
 
 /* Titre */
 .texto {
-  background-color: rgb(67, 12, 5, 0.7);
+  background-color: rgb(67, 12, 5, 0.2);
   text-align: center;
-  color: rgb(241, 238, 238);
+  color:  #430C05;
   font-family: serif;
-
-  font-size: 38px;
+text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  font-size: 48px;
   font-weight: bold;
   border-bottom: 2px solid #d8c1ac;
   width: fit-content;
   margin: 0 auto 40px;
-  padding: 40px;
+  padding: 20px;
   line-height: 1.4;
 
 }

@@ -2,7 +2,8 @@
   width: 260px;
   padding: 19px;
   border-radius: 50px;
-  background: #EEE6D8;
+  
+  background-color: rgb(243, 243, 238,0.7);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
   transition: 0.3s;
@@ -28,6 +29,7 @@
   font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
+  color: #430C05;
 }
 
 .cardRecipe-country {
@@ -50,10 +52,15 @@ Link{
   margin-right: auto;
 }
 .btn{
-  background-color: #a56e67;
+  background-color: #430C05;
+  color: #FFF;
   border-radius: 20px;
   padding: 8px;
   width: 90px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 12px auto 0;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+.btn:hover {
+  background-color: beige;    
 }

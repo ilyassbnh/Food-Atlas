@@ -11,19 +11,37 @@
   box-sizing: border-box;
 }
 
-/* 2. Form Styling - Matches the "Paragraph Box" from Home */
-.form-contact {
-  background-color: rgba(179, 136, 136, 0.95); /* Dusty pink/red from Home */
-  padding: 30px;
-  border-radius: 15px; /* Matches Home border-radius */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  color: white;
+/* 2. THE FORM BOX */
+form {
+  background-color: rgba(179, 136, 136, 0.95); /* Dusty Pink */
+  width: 100%;
+  max-width: 900px; /* Limits width so it doesn't look stretched */
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  
+  /* GRID: Creates the Left/Right Horizontal Split */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 50% Left, 50% Right */
+  gap: 40px; /* Space between the two sides */
+  align-items: start;
+}
+
+/* LEFT SIDE: Title and Inputs */
+.form-left {
   display: flex;
   flex-direction: column;
 }
 
-/* 3. Typography */
-.h2-contact {
+/* RIGHT SIDE: Message Area */
+.form-right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Typography */
+form h2 {
   font-family: Arial, sans-serif;
   font-size: 2.5rem;
   margin-top: 0;
@@ -32,12 +50,12 @@
   text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* 4. Inputs and Textarea */
-.input-contact {
-  width: 100%; /* Fills the container */
-  box-sizing: border-box; /* Ensures padding doesn't break layout */
-  padding: 12px 15px;
-  margin-bottom: 15px;
+/* Input Fields */
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 5px; /* Small margin */
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -46,22 +64,37 @@
   font-family: inherit;
 }
 
-.input-contact{
-  min-height: 120px;
-  resize: vertical; /* Allows user to make it taller, but not wider */
+form textarea {
+  height: 100%; /* Fills the height of the right side */
+  min-height: 200px;
+  resize: none; /* Prevents user resizing */
 }
 
-/* Focus Effect - Uses the Yellow from Home Cards */
-.input-contact:focus {
+/* Focus Styles */
+form input:focus,
+form textarea:focus {
   outline: none;
   box-shadow: 0 0 0 3px #ffdf8c;
 }
 
-/* 5. Submit Button - Matches "Main CTA Btn" from Home */
-.btn-contact {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
+/* ERROR MESSAGE STYLING (The Red Text) */
+.error-msg {
+  color: #7a0000; /* Dark red text */
+  background-color: #ffcccc; /* Light red background */
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-top: 2px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* SUBMIT BUTTON */
+form button {
+  grid-column: 1 / -1; /* Spans across both columns at the bottom */
+  margin-top: 20px;
+  padding: 15px;
   font-size: 1.2rem;
   background-color: #ff5722;
   color: white;
@@ -73,11 +106,20 @@
   transition: transform 0.2s;
 }
 
-.btn-contacthover {
-  background-color: #e64a19; /* Darker orange on hover */
+form button:hover {
+  background-color: #e64a19;
   transform: translateY(-2px);
 }
 
-.btn-contact:active {
-  transform: scale(0.98);
+/* MOBILE RESPONSIVE: Stacks them vertically on phones */
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr; /* Switch to 1 column */
+    padding: 30px;
+  }
+  
+  form textarea {
+    height: 150px;
+    margin-top: 20px;
+  }
 }

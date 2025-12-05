@@ -23,7 +23,7 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+     
       <Toaster richColors position='top-right' />
       
       <Routes>

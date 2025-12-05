@@ -9,7 +9,7 @@ const ManageRecipes = () => {
 
   const [search,setSearch] = useState("")
   return (
-    <div className='bg-white' >
+    <div className='bg-white h-[100vh] overflow-auto  ' >
 
     
     <div className='pl-[90px] pr-[90px]'>
@@ -18,8 +18,9 @@ const ManageRecipes = () => {
         <div className='flex place-content-between'>
           <input type="text" placeholder='Search By Name' onChange={(e) => setSearch(e.target.value)} className='w-[350px] p-[5px] bg-white rounded '   />
           <div className='flex gap-[10px]'>
-                 <button className='bg-green-600 hover:bg-green-700 text-white w-[150px] txt2 rounded ' ><Link className='text-white txt2 ' to="/">Go To Home</Link></button>
-                 <button className='bg-blue-600 hover:bg-blue-700 text-white w-[150px] txt2 rounded'><Link className='text-white txt2 ' to="/add">Add Recipes</Link></button>
+               <Link to="/" className="bg-green-600 hover:bg-green-700 text-white w-[150px] txt2 rounded py-2 text-center flex items-center justify-center no-line" >Go To Home</Link>
+               <Link to="/admin/add-recipe" className="bg-blue-600 hover:bg-blue-700 text-white w-[150px] txt2 rounded py-2 text-center flex items-center justify-center no-line ">Add Recipes</Link>
+
           </div>
           
         </div>
@@ -41,6 +42,7 @@ const ManageRecipes = () => {
             .map((index) => {
               return(
                 <CardAdmin title={index.title}
+                key={index.id}
                  country={index.country}
                   id={index.id}
                    style={{ animationDelay: `${index * 150}ms` }}

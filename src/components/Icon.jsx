@@ -3,6 +3,8 @@ import "./Icon.css";
 
 export default function Icon({ country }) {
   const drapeau = {
+    Morocco:"https://flagsapi.com/MA/flat/32.png",
+    Morroco:"https://flagsapi.com/MA/flat/32.png",
     Maroc: "https://flagsapi.com/MA/flat/32.png",
     France: "https://flagsapi.com/FR/flat/32.png",
     Espagne: "https://flagsapi.com/ES/flat/32.png",

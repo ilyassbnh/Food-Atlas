@@ -344,6 +344,109 @@
         "Form balls and fry.",
         "Wrap with tahini and salad."
       ]
+    },
+    {
+      "id": "3010",
+      "name": "RIZLAN",
+      "category": "MAROC",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764838939/gfadskvnm2zx1odnobxg.png",
+      "ingredients": [
+        "ZGVJNB JHZ",
+        "HBAGV",
+        "JHBVX"
+      ],
+      "description": "KATDWI BZAF",
+      "steps": [
+        "GGCA HBV ZF HHVVA",
+        "HHVAFF HVZFCA"
+      ]
+    },
+    {
+      "id": "7b34",
+      "name": "hsna",
+      "category": "maroc",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764847138/m5bnmril18shmbs1llka.jpg",
+      "ingredients": [
+        "hhfg",
+        "bbbfh",
+        "ijjd",
+        ""
+      ],
+      "description": "affiche vers recipe",
+      "steps": [
+        "hhfg",
+        "hdgd",
+        "iidhd"
+      ]
+    },
+    {
+      "id": "a443",
+      "name": "nasima",
+      "category": "itali",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764847440/nc9f5hhlwdtfthojunoq.jpg",
+      "ingredients": [
+        "ccbcn",
+        "kjn",
+        "innd",
+        ""
+      ],
+      "description": "sfffs hhd hhbddggb ujnbd",
+      "steps": [
+        "dsss",
+        "fddjk",
+        "ssmmmms"
+      ]
+    },
+    {
+      "id": "6c2a",
+      "name": "fati",
+      "category": "utali",
+      "image": "",
+      "ingredients": [
+        "ncb",
+        "uhs",
+        ""
+      ],
+      "description": "ncnnx",
+      "steps": [
+        "wtfcd",
+        "ygvd",
+        ""
+      ]
+    },
+    {
+      "id": "b260",
+      "name": "nassima",
+      "category": "maroc",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764847797/g1gmblqsfyugd5gkgfp4.png",
+      "ingredients": [
+        "jhf",
+        "jjnf",
+        "jnf"
+      ],
+      "description": "dkkj jjfn jnf",
+      "steps": [
+        "hhfh hhbndg ujjhd",
+        "hhbdf",
+        ""
+      ]
+    },
+    {
+      "id": "25ac",
+      "name": "",
+      "category": "fati",
+      "image": "",
+      "ingredients": [
+        "gfd",
+        "ydgvd",
+        "ggsf"
+      ],
+      "description": "df hhbs hbvfs ",
+      "steps": [
+        "hhgd hbvsf gcsg",
+        "ggvshhsr hggs",
+        ""
+      ]
     }
   ]
 }

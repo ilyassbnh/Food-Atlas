@@ -39,7 +39,6 @@ function App() {
         <Route path="/admin/add-recipe" element={<Add />} />
       </Routes>
     </BrowserRouter>
-  );
-}
+   )}
 
 export default App;

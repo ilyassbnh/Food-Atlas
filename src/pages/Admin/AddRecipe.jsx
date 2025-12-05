@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./add.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Add() {
@@ -14,6 +15,7 @@ export default function Add() {
   });
 
   const [loadingImg, setLoadingImg] = useState(false);
+  const navigate = useNavigate();
 
   // 🔹 Changer les inputs
   function handleChange(e) {
@@ -41,13 +43,13 @@ export default function Add() {
       setInput(prev => ({
   ...prev,
   image: res.data.secure_url
-}));
+}));console.log(prev)
     } catch (error) {
       console.error("Erreur upload image :", error);
     }
 
     setLoadingImg(false);
-  }
+  }``
 
   // 🔹 POST vers JSON Server + vider formulaire
   async function handleSubmit(e) {
@@ -55,16 +57,20 @@ export default function Add() {
 
     const newRecette = {
       ...input,
-      ingredients: input.ingredients.split(",").map(i => i.trim()),
+      ingredients: input.ingredients.split(",").map(i => i.trim()), 
       steps: input.steps.split(",").map(s => s.trim()),
     };
+      console.log(input)
 
     try {
       await axios.post("http://localhost:3000/recipes", newRecette);
       alert("Recette enregistrée !");
+      
     } catch (error) {
       console.error("Erreur POST :", error);
     }
+    console.log(newRecette);
+    
 
     // vider formulaire
     setInput({
@@ -76,15 +82,19 @@ export default function Add() {
       steps: "",
     });
   }
+  function handleExit() {
+  navigate(-1);
+}
 
   return (
     <form className="formule" onSubmit={handleSubmit}>
-      <h2>Ajouter une recette</h2>
-
+      <h2 className="titre">Add a recipe</h2>
+      <button type="button" onClick={handleExit} className="Btnexit"> x </button>
+      
       <input
         type="text"
         name="name"
-        placeholder="Nom"
+        placeholder="title"
         value={input.name}
         onChange={handleChange}
       />
@@ -123,8 +133,11 @@ export default function Add() {
         value={input.steps}
         onChange={handleChange}
       ></textarea>
-
-      <button className="Btn" type="submit">Ajouter</button>
+      <div className="button-container">
+        <button type="button"   className="ManageRecipe"onClick={() => navigate("/manage")}>Change</button>
+        <button className="Btn" type="submit" onClick={() => navigate("/recipes")}>Add</button>
+      </div>
     </form>
+    
   );
 }

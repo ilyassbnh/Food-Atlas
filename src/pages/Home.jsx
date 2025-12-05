@@ -1,13 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // 1. Import useNavigate
+import { useNavigate } from "react-router-dom"; 
 import "./Home.css";
 import jsonFile from '../data/app.json'; 
 
-
 export default function Home() {
-  const countryList = jsonFile && jsonFile.data ? jsonFile.data : [];
+  // FIX 1: Change 'jsonFile.data' to 'jsonFile.categories'
+  const countryList = jsonFile && jsonFile.categories ? jsonFile.categories : [];
   
-  // 2. Initialize the navigation hook
   const navigate = useNavigate();
 
   return (
@@ -17,11 +16,7 @@ export default function Home() {
       <div className="intro-container">
         <div className="paragraph-box">
           <p>
-            Welcome to RecipeFood, your gateway to discovering international flavors from around the world. 
-            This website was created to make cooking easier, fun, and accessible for everyone—whether 
-            you’re a beginner or a food lover looking for new inspiration. Here, you’ll find simple, 
-            step-by-step recipes from different cultures so you can explore global cuisine right from 
-            your kitchen. Enjoy learning, cooking, and sharing delicious food from every corner of the world.
+            Welcome to RecipeFood, your gateway to discovering international flavors...
           </p>
         </div>
       </div>
@@ -30,11 +25,21 @@ export default function Home() {
       <section className="cardContainer">
         {countryList.map((item, index) => (
           <div className="cardTest" key={index}>
-            <h1>{item.Name}</h1>
-            <p>{item.description}</p>
+            {/* FIX 2: Your JSON has an "image" link, let's show it! */}
+            <img 
+              src={item.image} 
+              alt={item.name} 
+              style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '8px' }}
+            />
+
+            {/* FIX 3: Your JSON uses lowercase "name", not "Name" */}
+            <h1>{item.name}</h1>
+            
+            {/* Note: Your current JSON snippet doesn't have a 'description' field, 
+                so this will be empty unless you add it to the JSON. */}
+            <p>{item.description}</p> 
             
             <div className="cardButton">
-              {/* 3. Make the card buttons functional too */}
               <button onClick={() => navigate('/recipes')}>
                 Details
               </button>
@@ -43,7 +48,7 @@ export default function Home() {
         ))}
       </section>
 
-      {/* --- NEW BUTTON: GO TO NEXT PAGE --- */}
+      {/* --- BUTTON: GO TO NEXT PAGE --- */}
       <div className="ccc" style={{ paddingBottom: '40px' }}>
         <button 
           className="main-cta-btn" 

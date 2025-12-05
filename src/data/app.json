@@ -53,6 +53,31 @@
       "id": "1"
     },
     {
+      "title": "Beef Tagine with Bar9o9",
+      "category_id": "1",
+      "country": "Morroco",
+      "description": "A sweet and savory Moroccan classic featuring tender beef and caramelized prunes.",
+      "prep_time": "20 min",
+      "cook_time": "120 min",
+      "servings": "5",
+      "difficulty": "Medium",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580245/ea228ce9cd9e0d2ed76054b778a67633_drvsot.jpg",
+      "ingredients": [
+        "1kg beef shank",
+        "200g prunes",
+        "Onions",
+        "Cinnamon",
+        "Honey",
+        "Almonds"
+      ],
+      "instructions": [
+        "Sear beef with onions.",
+        "Simmer with spices for 1.5 hours.",
+        "Caramelize prunes and top the beef."
+      ],
+      "id": "3c15"
+    },
+    {
       "title": "Seven Vegetable Couscous",
       "category_id": "1",
       "country": "Morocco",
@@ -61,7 +86,7 @@
       "cook_time": "60 min",
       "servings": 6,
       "difficulty": "Hard",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580303/6c7249633135c18f8cd38a9bc0fe33d0_rrettz.jpg",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764847379/v1g5fysogrd4s35qpc7w.jpg",
       "ingredients": [
         "Couscous",
         "Lamb/Chicken",
@@ -76,7 +101,7 @@
         "Cook meat and hard veggies in broth.",
         "Add soft veggies later and serve."
       ],
-      "id": "7184"
+      "id": "6e98"
     },
     {
       "title": "Harira Soup",
@@ -101,7 +126,7 @@
         "Simmer with tomatoes and lentils.",
         "Thicken and add vermicelli."
       ],
-      "id": "945b"
+      "id": "1084"
     },
     {
       "id": "7",
@@ -129,74 +154,29 @@
       ]
     },
     {
-      "title": "Classic Caesar Salades",
-      "category_id": "5",
-      "country": "International",
-      "description": "Crisp romaine lettuce with parmesan and croutons.",
-      "prep_time": "20 min",
-      "cook_time": "0 min",
-      "servings": 2,
-      "difficulty": "Easy",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580860/f9bea17b6ace81729c5183fe4793c44b_trawcf.jpg",
-      "ingredients": [
-        "Romaine lettuce",
-        "Parmesan",
-        "Croutons",
-        "Caesar dressing"
-      ],
-      "instructions": [
-        "Chop lettuce.",
-        "Toss with dressing.",
-        "Top with cheese and croutons."
-      ],
-      "id": "10"
-    },
-    {
-      "title": "Spaghetti Carbonara",
-      "category_id": "2",
-      "country": "Italie",
-      "description": "Authentic Roman pasta made with eggs and cured pork.",
-      "prep_time": "10 min",
-      "cook_time": "15 min",
-      "servings": 2,
+      "title": "Fudgy Brownies",
+      "category_id": "6",
+      "country": "USAaaaaa",
+      "description": "Rich, chocolatey squares with a crinkly top.",
+      "prep_time": "15 min",
+      "cook_time": "30 min",
+      "servings": "12",
       "difficulty": "Medium",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580997/57e7a19334571946391a7430fcb86202_mhqrz5.jpg",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764846244/x8jypdcrzos6qpxrwngf.jpg",
       "ingredients": [
-        "Spaghetti",
-        "Guanciale/Bacon",
-        "Pecorino",
+        "Dark chocolate",
+        "Butter",
+        "Sugar",
         "Eggs",
-        "Pepper"
+        "Cocoa",
+        "Flour"
       ],
       "instructions": [
-        "Boil pasta and fry bacon.",
-        "Whisk eggs and cheese.",
-        "Toss hot pasta with egg mix off heat."
+        "Melt butter and chocolate.",
+        "Whisk sugar/eggs, fold dry ingredients.",
+        "Bake at 180°C for 25 mins."
       ],
-      "id": "11"
-    },
-    {
-      "title": "Margherita Pizza",
-      "category_id": "2",
-      "country": "Italie",
-      "description": "Neapolitan classic with tomato sauce and mozzarella.",
-      "prep_time": "120 min",
-      "cook_time": "10 min",
-      "servings": 2,
-      "difficulty": "Medium",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764580997/57e7a19334571946391a7430fcb86202_mhqrz5.jpg",
-      "ingredients": [
-        "Dough",
-        "San Marzano tomatoes",
-        "Mozzarella",
-        "Basil"
-      ],
-      "instructions": [
-        "Stretch dough.",
-        "Add sauce and cheese.",
-        "Bake at max heat."
-      ],
-      "id": "12"
+      "id": "19"
     },
     {
       "id": "13",
@@ -222,7 +202,6 @@
       ]
     },
     {
-      "id": "14",
       "title": "Chicken Tikka Masala",
       "category_id": "4",
       "country": "Inde",
@@ -231,7 +210,7 @@
       "cook_time": "40 min",
       "servings": 4,
       "difficulty": "Medium",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581079/68285d522788922f3fed6b4d8d185084_eguiau.jpg",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764847118/lj2j6hghcukqzhyt0fr5.jpg",
       "ingredients": [
         "Chicken",
         "Yogurt",
@@ -243,7 +222,8 @@
         "Marinate and grill chicken.",
         "Simmer spiced tomato sauce.",
         "Add cream and chicken."
-      ]
+      ],
+      "id": "14"
     },
     {
       "title": "Shakshuka",
@@ -254,7 +234,7 @@
       "cook_time": "20 min",
       "servings": "4",
       "difficulty": "Easy",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581110/28aab2440fe80f51921d630a825571dc_iuzco1.jpg",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764847103/okmyyjug6drapxwqjt3t.jpg",
       "ingredients": [
         "Eggs",
         "Tomatoes",
@@ -267,11 +247,10 @@
         "Add tomatoes and simmer.",
         "Crack eggs into sauce and cover."
       ],
-      "id": "c2d1"
+      "id": "2afb"
     },
     {
-      "id": "16",
-      "title": "Beef Tacos",
+      "title": "Beef Tacos tacoos",
       "category_id": "3",
       "country": "Mexique",
       "description": "Mexican street-style tacos with seasoned ground beef.",
@@ -279,7 +258,7 @@
       "cook_time": "15 min",
       "servings": 4,
       "difficulty": "Easy",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581147/3241880813fac1480cabf86d28fbdc48_mlfoo1.jpg",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764846539/q4ly2dg8qxktdtyzqupp.jpg",
       "ingredients": [
         "Corn tortillas",
         "Ground beef",
@@ -291,7 +270,8 @@
         "Brown beef with seasoning.",
         "Warm tortillas.",
         "Assemble with fresh toppings."
-      ]
+      ],
+      "id": "16"
     },
     {
       "title": "Japanese Ramen",
@@ -302,7 +282,7 @@
       "cook_time": "180 min",
       "servings": "3",
       "difficulty": "Hard",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581179/d26ca7c688128542ebc5e9d491db1b6e_kj3his.jpg",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764847495/mtki0sb26j7t2jkugqh9.jpg",
       "ingredients": [
         "Ramen noodles",
         "Stock",
@@ -342,31 +322,6 @@
       ]
     },
     {
-      "id": "19",
-      "title": "Fudgy Brownies",
-      "category_id": "6",
-      "country": "USA",
-      "description": "Rich, chocolatey squares with a crinkly top.",
-      "prep_time": "15 min",
-      "cook_time": "30 min",
-      "servings": 9,
-      "difficulty": "Medium",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581248/fd9ec12ea9c0287f551537da3dc75605_jeuxpm.jpg",
-      "ingredients": [
-        "Dark chocolate",
-        "Butter",
-        "Sugar",
-        "Eggs",
-        "Cocoa",
-        "Flour"
-      ],
-      "instructions": [
-        "Melt butter and chocolate.",
-        "Whisk sugar/eggs, fold dry ingredients.",
-        "Bake at 180°C for 25 mins."
-      ]
-    },
-    {
       "id": "20",
       "title": "Cheesecake",
       "category_id": "6",
@@ -391,7 +346,6 @@
       ]
     },
     {
-      "id": "21",
       "title": "Lemon Tart",
       "category_id": "6",
       "country": "France",
@@ -400,7 +354,7 @@
       "cook_time": "30 min",
       "servings": 8,
       "difficulty": "Medium",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764581304/261026b6b2cfa878dad54b25d2ce9324_icpirj.jpg",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764857620/jxxw0yjp2hcivhlhxfno.jpg",
       "ingredients": [
         "Pastry flour",
         "Butter",
@@ -412,7 +366,8 @@
         "Bake pastry shell.",
         "Cook lemon curd.",
         "Fill shell and chill."
-      ]
+      ],
+      "id": "21"
     },
     {
       "id": "22",
@@ -436,6 +391,109 @@
         "Blend chickpeas and herbs.",
         "Form balls and fry.",
         "Wrap with tahini and salad."
+      ]
+    },
+    {
+      "id": "3010",
+      "name": "RIZLAN",
+      "category": "MAROC",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764838939/gfadskvnm2zx1odnobxg.png",
+      "ingredients": [
+        "ZGVJNB JHZ",
+        "HBAGV",
+        "JHBVX"
+      ],
+      "description": "KATDWI BZAF",
+      "steps": [
+        "GGCA HBV ZF HHVVA",
+        "HHVAFF HVZFCA"
+      ]
+    },
+    {
+      "id": "7b34",
+      "name": "hsna",
+      "category": "maroc",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764847138/m5bnmril18shmbs1llka.jpg",
+      "ingredients": [
+        "hhfg",
+        "bbbfh",
+        "ijjd",
+        ""
+      ],
+      "description": "affiche vers recipe",
+      "steps": [
+        "hhfg",
+        "hdgd",
+        "iidhd"
+      ]
+    },
+    {
+      "id": "a443",
+      "name": "nasima",
+      "category": "itali",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764847440/nc9f5hhlwdtfthojunoq.jpg",
+      "ingredients": [
+        "ccbcn",
+        "kjn",
+        "innd",
+        ""
+      ],
+      "description": "sfffs hhd hhbddggb ujnbd",
+      "steps": [
+        "dsss",
+        "fddjk",
+        "ssmmmms"
+      ]
+    },
+    {
+      "id": "6c2a",
+      "name": "fati",
+      "category": "utali",
+      "image": "",
+      "ingredients": [
+        "ncb",
+        "uhs",
+        ""
+      ],
+      "description": "ncnnx",
+      "steps": [
+        "wtfcd",
+        "ygvd",
+        ""
+      ]
+    },
+    {
+      "id": "b260",
+      "name": "nassima",
+      "category": "maroc",
+      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764847797/g1gmblqsfyugd5gkgfp4.png",
+      "ingredients": [
+        "jhf",
+        "jjnf",
+        "jnf"
+      ],
+      "description": "dkkj jjfn jnf",
+      "steps": [
+        "hhfh hhbndg ujjhd",
+        "hhbdf",
+        ""
+      ]
+    },
+    {
+      "id": "25ac",
+      "name": "",
+      "category": "fati",
+      "image": "",
+      "ingredients": [
+        "gfd",
+        "ydgvd",
+        "ggsf"
+      ],
+      "description": "df hhbs hbvfs ",
+      "steps": [
+        "hhgd hbvsf gcsg",
+        "ggvshhsr hggs",
+        ""
       ]
     }
   ]

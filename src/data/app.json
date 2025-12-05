@@ -250,30 +250,6 @@
       "id": "2afb"
     },
     {
-      "title": "Japanese Ramen",
-      "category_id": "4",
-      "country": "Japon",
-      "description": "Noodle soup with a rich savory broth and soft egg.",
-      "prep_time": "30 min",
-      "cook_time": "180 min",
-      "servings": "3",
-      "difficulty": "Hard",
-      "image": "https://res.cloudinary.com/dtpjdj7m4/image/upload/v1764847495/mtki0sb26j7t2jkugqh9.jpg",
-      "ingredients": [
-        "Ramen noodles",
-        "Stock",
-        "Soy sauce",
-        "Egg",
-        "Nori"
-      ],
-      "instructions": [
-        "Simmer broth.",
-        "Cook noodles.",
-        "Assemble bowl with toppings."
-      ],
-      "id": "17"
-    },
-    {
       "id": "18",
       "title": "Acai Bowl",
       "category_id": "5",

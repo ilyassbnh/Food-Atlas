@@ -66,68 +66,41 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (validate()) {
-      // Success!
-      toast.success("Message sent successfully!");
-      console.log("Form Data:", formData);
-      
-      // Clear form after success
-      setFormData({ name: '', email: '', message: '' });
-      setErrors({});
-    } else {
-      // Failure
-      toast.error("Please fix the errors highlighted in red.");
-    }
-  };
-
   return (
-    <div className="contact-container">
-      <form onSubmit={handleSubmit}>
-        
-        {/* LEFT SIDE: Name & Email */}
-        <div className="form-left">
-          <h2>Contact Us</h2>
-          
-          {/* Name Input */}
-          <input 
-            type="text" 
-            name="name" 
-            placeholder="Name" 
-            value={formData.name}
-            onChange={handleChange}
-            style={{ border: errors.name ? '3px solid #7a0000' : 'none' }}
-          />
-          {errors.name && <span className="error-msg">{errors.name}</span>}
+    <form className="form-contact" onSubmit={handleSubmit} style={{ width: "300px", margin: "40px auto" }}>
+      
+      <h2 className="h2-contact">Contact</h2>
 
-          {/* Email Input */}
-          <input 
-            type="text" 
-            name="email" 
-            placeholder="Email" 
-            value={formData.email}
-            onChange={handleChange}
-            style={{ border: errors.email ? '3px solid #7a0000' : 'none' }}
-          />
-          {errors.email && <span className="error-msg">{errors.email}</span>}
-        </div>
+      <input 
+      className="input-contact"
+        name="name"
+        placeholder="Nom"
+        value={form.name}
+        onChange={handleChange}
+        required
+      /><br/>
 
-        {/* RIGHT SIDE: Message */}
-        <div className="form-right">
-          <textarea 
-            name="message" 
-            placeholder="Type your message here..." 
-            value={formData.message}
-            onChange={handleChange}
-            style={{ border: errors.message ? '3px solid #7a0000' : 'none' }}
-          ></textarea>
-          {errors.message && <span className="error-msg">{errors.message}</span>}
-        </div>
+      <input
+      className="input-contact" 
+        name="email"
+        type="email"
+        placeholder="Email"
+        value={form.email}
+        onChange={handleChange}
+        required
+      /><br/>
 
-        {/* BOTTOM: Submit Button */}
-        <button type="submit">Send Message</button>
-        
-      </form>
-    </div>
+      <textarea
+      className="input-contact"
+        name="message"
+        placeholder="Message"
+        value={form.message}
+        onChange={handleChange}
+        required
+      ></textarea><br/>
+
+      <button className="btn-contact" type="submit">Envoyer</button>
+    </form>
   );
 };
 

@@ -78,13 +78,13 @@
 }
 
 /* Titre */
-.texto {
+.texto , .text{
   background-color: rgb(67, 12, 5, 0.2);
   text-align: center;
-  color:  #430C05;
-  font-family: serif;
+  color:  white;
+  font-family: "Barlow Condensed", sans-serif;
 text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
-  font-size: 48px;
+  font-size: 43px;
   font-weight: bold;
   border-bottom: 2px solid #d8c1ac;
   width: fit-content;

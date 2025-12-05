@@ -35,10 +35,17 @@
 .cardRecipe-country {
   font-size: 15px;
   color: #430C05;
-  margin-top: 5px;
-   margin-left: auto;
-  margin-right: auto;
+ margin-bottom: 0;
+   
+
 }
+.countdrap {
+  display: flex;
+  align-items: center; 
+  justify-content: center;  
+  gap: 15px;              
+}
+
 .icon1{
   width:20px ;
   height:20px ;

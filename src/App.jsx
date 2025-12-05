@@ -21,6 +21,8 @@ function App() {
   const cld = new Cloudinary({
     cloud: { cloudName: 'dtpjdj7m4' }
   });
+  
+  return (
 
     <BrowserRouter>
       {/* <Navbar /> */}
@@ -37,7 +39,6 @@ function App() {
         <Route path="/manage" element={<ManageRecipes  />} />
       </Routes>
     </BrowserRouter>
-  
-}
+   )}
 
 export default App;

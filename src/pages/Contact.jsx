@@ -1,29 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Contact.css';
 import { toast } from 'sonner';
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  // 1. State to hold the input values
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
 
-  // 2. State to hold the error messages
   const [errors, setErrors] = useState({});
 
-  // Handle typing in inputs
+  const form = useRef();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    
-    // Update value
+
     setFormData({
       ...formData,
       [name]: value
     });
 
-    // Clear error for this specific field immediately when user starts typing
     if (errors[name]) {
       setErrors({
         ...errors,
@@ -32,27 +31,24 @@ const Contact = () => {
     }
   };
 
-  // 3. Validation Logic
+  // validation
   const validate = () => {
     let newErrors = {};
     let isValid = true;
 
-    // Check Name
     if (!formData.name.trim()) {
       newErrors.name = "Name is required.";
       isValid = false;
     }
 
-    // Check Email
     if (!formData.email.trim()) {
       newErrors.email = "Email is required.";
       isValid = false;
     } else if (!formData.email.includes('@')) {
-      newErrors.email = "Email must contain an '@' symbol.";
+      newErrors.email = "Invalid email format.";
       isValid = false;
     }
 
-    // Check Message
     if (!formData.message.trim()) {
       newErrors.message = "Message cannot be empty.";
       isValid = false;
@@ -61,34 +57,49 @@ const Contact = () => {
     setErrors(newErrors);
     return isValid;
   };
+  const Service = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const Template = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const Public = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-  // Handle Submit
-  const handleSubmit = (e) => {
+  // send email
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    if (validate()) {
-      // Success!
+    if (!validate()) {
+      toast.error("Please fix the errors highlighted in red.");
+      return;
+    }
+
+  emailjs.send(
+     Service,   // NOT the public key
+  Template,  // your template ID
+  {
+    name: formData.name,
+    email: formData.email,
+    message: formData.message
+  },             // your form ref
+  Public    // your public key
+)
+    .then(() => {
       toast.success("Message sent successfully!");
-      console.log("Form Data:", formData);
-      
-      // Clear form after success
+      console.log("Email sent!");
+
       setFormData({ name: '', email: '', message: '' });
       setErrors({});
-    } else {
-      // Failure
-      toast.error("Please fix the errors highlighted in red.");
-    }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      toast.error("Failed to send message.");
+    });
   };
 
   return (
     <div className="contact-container">
-      <form onSubmit={handleSubmit} className='form'>
+      <form ref={form} onSubmit={sendEmail} className='form'>
         
-        {/* LEFT SIDE: Name & Email */}
         <div className="form-left">
           <h2 className='h2'>Contact Us</h2>
-          
-          {/* Name Input */}
+
           <input 
             type="text" 
             name="name"
@@ -100,7 +111,6 @@ const Contact = () => {
           />
           {errors.name && <span className="error-msg">{errors.name}</span>}
 
-          {/* Email Input */}
           <input 
             type="text" 
             name="email" 
@@ -113,7 +123,6 @@ const Contact = () => {
           {errors.email && <span className="error-msg">{errors.email}</span>}
         </div>
 
-        {/* RIGHT SIDE: Message */}
         <div className="form-right">
           <textarea 
             name="message" 
@@ -126,9 +135,7 @@ const Contact = () => {
           {errors.message && <span className="error-msg">{errors.message}</span>}
         </div>
 
-        {/* BOTTOM: Submit Button */}
         <button className='button' type="submit">Send Message</button>
-        
       </form>
     </div>
   );

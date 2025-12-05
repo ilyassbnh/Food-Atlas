@@ -217,7 +217,7 @@ const uploadImageToCloudinary = async (file) => {
         {/* Image Upload */}
 {/* Image Upload */}
 <div>
-  <label className="text-sm font-medium">Current Image</label>
+   <label className="text-sm font-medium">Current Image</label>
    
   <input
     type="file"

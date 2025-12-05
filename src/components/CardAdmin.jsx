@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './CardAdmin.css'
 import axios from "axios"
 import { toast, Toaster } from 'sonner';
+import { IoClose } from "react-icons/io5";
 const CardAdmin = (props) => {
 
 
@@ -136,7 +137,8 @@ const uploadImageToCloudinary = async (file) => {
     {DeletePop && (
       <>
       <div className="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
-      <div className=' fixed top-[200px] left-[420px]    w-[350px] h-[250px] rounded-md box bg-white flex  flex-col text-start p-4 z-50 '>
+      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[250px] rounded-md box bg-white flex flex-col text-start p-4 z-50">
+
           <h3>Are you sure you want to delete</h3>
           <h6 className='pt-[20px]'>{title} from {country}</h6>
           <div className='flex justify-center gap-[100px] place-content-around place-content-between mt-[50px]'>
@@ -155,10 +157,11 @@ const uploadImageToCloudinary = async (file) => {
     <div className="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
 
     {/* Popup */}
-    <div className='fixed top-[100px] left-[50%] translate-x-[-50%] w-[500px] max-h-[80vh] overflow-y-auto rounded-md box bg-white flex flex-col p-6 z-50 shadow-lg'>
+    <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] max-h-[80vh] overflow-y-auto rounded-md box bg-white flex flex-col p-6 z-50 shadow-lg">
+
     <div className='flex place-content-between '>
       <h3 className="text-xl font-semibold mb-4 text-center ">Edit Recipe</h3>
-      <button className='bg-[#eeeded] text-black w-[100px] rounded h-[40px]' onClick={() => setEditPop(false)}>Cancel</button>
+      <button className='bg-white text-black w-[30px] rounded h-[40px]' onClick={() => setEditPop(false)}><IoClose size={24} /></button>
     </div>
 
       {/* Recipe Form */}

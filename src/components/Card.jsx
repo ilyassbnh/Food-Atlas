@@ -1,6 +1,7 @@
 import './Card.css'
 import Icon from './Icon';
 import { useNavigate } from "react-router-dom";
+
 export default function Card({ image, title, country,icon ,id}) {
   const navigate = useNavigate();
 
